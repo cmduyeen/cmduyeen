@@ -1,12 +1,14 @@
 <!-- SEO Metadata -->
-<meta name="description" content="Personal profile of cmduyeen. Creator of Pinkie Theme, building cozy digital spaces and developer tools.">
-<meta name="keywords" content="cmduyeen, Pinkie Theme, github profile, developer, pastel pink, cozy coding, automation">
+<meta name="description" content="Personal profile of cmduyeen. Creator of Pinkie Theme & Lịch Âm Việt Nam, building cozy digital spaces and developer tools.">
+<meta name="keywords" content="cmduyeen, Pinkie Theme, Lịch Âm Việt Nam, lich am viet nam, github profile, developer, pastel pink, cozy coding, automation">
 <meta name="author" content="cmduyeen">
 
 <!-- INFORMATION -->
 ### Products
 
 <a href="https://github.com/pinkie-theme/pinkie-theme"><img src="https://img.shields.io/badge/Pinkie_Theme-FFD1DC?style=flat" alt="Pinkie Theme" /></a> — Cozy pastel workspaces for developers.
+
+<a href="https://github.com/cmduyeen/lich-am-viet-nam"><img src="https://img.shields.io/badge/Lịch_Âm_Việt_Nam-FFD1DC?style=flat" alt="Lịch Âm Việt Nam" /></a> — Automated Vietnamese Lunar Calendar sync for Google Calendar, Apple Calendar & Outlook.
 
 ### Stack
 
@@ -22,5 +24,5 @@
 </p>
 
 <p align="center">
-  <img src="signature.svg" alt="cmduyeen" width="200" />
+  <img src="signature.svg" alt="cmduyeen" width="400" />
 </p>
