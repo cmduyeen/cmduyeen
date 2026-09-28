@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 100" width="100%" height="100%">
+  <defs>
+    <!-- Elegant fading gradients for the horizontal divider lines -->
+    <linearGradient id="pinkieFadeLeft" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#D4698B" stop-opacity="0" />
+      <stop offset="70%" stop-color="#D4698B" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#D4698B" stop-opacity="0.65" />
+    </linearGradient>
+    <linearGradient id="pinkieFadeRight" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#D4698B" stop-opacity="0.65" />
+      <stop offset="30%" stop-color="#D4698B" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#D4698B" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+
+  <!-- Horizontal Divider Line (Catppuccin on-line style) -->
+  <line x1="20" y1="65" x2="155" y2="65" stroke="url(#pinkieFadeLeft)" stroke-width="1.6" stroke-linecap="round" />
+  <line x1="505" y1="65" x2="700" y2="65" stroke="url(#pinkieFadeRight)" stroke-width="1.6" stroke-linecap="round" />
+
+  <g fill="none" stroke="#D4698B" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Cat Head Mascot (Left) -->
+    <!-- Head outline and ears -->
+    <path d="M 155 65 C 144 65 133 54 135 39 C 137 27 141 18 147 13 C 151 10 156 12 159 18 C 163 25 170 30 178 29 C 185 28 190 23 193 17 C 196 11 201 10 203 14 C 209 22 213 32 214 42 C 215 55 205 65 192 65" stroke-width="2.2" />
+    
+    <!-- Cute Eyes & Nose -->
+    <path d="M 157 40 Q 163 36 168 40" stroke-width="1.8" />
+    <path d="M 180 40 Q 185 36 190 40" stroke-width="1.8" />
+    <path d="M 173 46 L 174 48 L 175 46" stroke-width="1.6" />
+
+    <!-- Playful cheek loop connecting to 'd' -->
+    <path d="M 170 65 C 160 65 152 54 163 47 C 176 40 188 54 195 65 L 218 65" stroke-width="2.2" />
+
+    <!-- Cursive 'd' -->
+    <path d="M 238 60 C 233 49 220 48 218 56 C 216 63 226 65 242 65 L 242 22 C 242 19 238 20 238 24 L 242 65 C 242 65 246 65 254 59" stroke-width="2.2" />
+
+    <!-- Cursive 'u' -->
+    <path d="M 254 59 C 259 54 265 47 268 47 C 272 47 272 58 272 65 C 272 65 277 66 285 50 C 288 47 291 49 291 58 L 291 65 C 291 65 296 65 303 59" stroke-width="2.2" />
+
+    <!-- Cursive 'y' with calligraphic descender loop -->
+    <path d="M 303 59 C 308 54 314 47 317 47 C 321 47 321 58 321 65 C 321 65 327 66 335 50 C 338 47 338 54 338 68 C 338 78 335 88 328 92 C 321 95 315 89 320 81 C 326 71 341 63 350 57" stroke-width="2.2" />
+
+    <!-- Cursive 'e' -->
+    <path d="M 350 57 C 356 52 366 45 370 48 C 374 51 368 58 361 61 C 356 63 360 65 367 65 C 373 65 379 62 385 57" stroke-width="2.2" />
+
+    <!-- Cursive 'n' -->
+    <path d="M 385 57 C 389 53 393 47 396 47 C 399 47 399 57 399 65 C 401 56 408 47 414 47 C 420 47 420 57 420 65 L 438 65" stroke-width="2.2" />
+
+    <!-- Flourish swooping into Heart '♡' -->
+    <path d="M 438 65 Q 452 65 464 54" stroke-width="2.2" />
+
+    <!-- Standing Heart '♡' -->
+    <path d="M 464 54 C 454 44 451 32 460 26 C 467 21 473 26 476 33 C 478 26 484 21 491 26 C 500 32 497 44 487 54 C 481 60 475 65 470 65" stroke-width="2.2" />
+
+    <!-- Soft exit stroke connecting to right line -->
+    <path d="M 470 65 Q 486 65 505 65" stroke-width="2.2" />
+  </g>
+</svg>
