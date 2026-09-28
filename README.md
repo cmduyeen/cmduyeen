@@ -1,3 +1,9 @@
+<!-- SEO Metadata -->
+<meta name="description" content="Personal profile of cmduyeen. Creator of Pinkie Theme, building cozy digital spaces and developer tools.">
+<meta name="keywords" content="cmduyeen, Pinkie Theme, github profile, developer, pastel pink, cozy coding, automation">
+<meta name="author" content="cmduyeen">
+
+<!-- INFORMATION -->
 ### Products
 
 <a href="https://github.com/cmduyeen"><img src="https://img.shields.io/badge/Pinkie_Theme-FFD1DC?style=flat" alt="Pinkie Theme" /></a> — Cozy pastel workspaces for developers.
