@@ -6,7 +6,7 @@
 <!-- INFORMATION -->
 ### Products
 
-<a href="https://github.com/cmduyeen"><img src="https://img.shields.io/badge/Pinkie_Theme-FFD1DC?style=flat" alt="Pinkie Theme" /></a> — Cozy pastel workspaces for developers.
+<a href="https://github.com/pinkie-theme/pinkie-theme"><img src="https://img.shields.io/badge/Pinkie_Theme-FFD1DC?style=flat" alt="Pinkie Theme" /></a> — Cozy pastel workspaces for developers.
 
 ### Stack
 
