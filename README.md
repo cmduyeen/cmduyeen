@@ -1,6 +1,6 @@
 <div align="center">
-  <h2>Hi, I'm Duyên 👋</h2>
-  <p>Building cozy digital spaces & developer tools.</p>
+  <h2>Nothing to see here. Move along. 🚶‍♂️</h2>
+  <p>Seriously, there is absolutely nothing on this page.</p>
   <br />
   <p>
     <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
