@@ -98,9 +98,9 @@ jobs:
                   .join(' ');
                 const repoList = matchingRepos
                   .sort((a, b) => a.name.localeCompare(b.name, 'en', { sensitivity: 'base' }))
-                  .map((repo) => `  * [${repo.name}](${repo.html_url})`)
+                  .map((repo) => `- [${repo.name}](${repo.html_url})`)
                   .join('\n');
-                return `* **${title}**\n${repoList}`;
+                return `<details>\n<summary><strong>${title}</strong></summary>\n\n${repoList}\n</details>`;
               })
               .join('\n') || '* Add one primary `type-...` GitHub Topic to a repository to create groups automatically.';
 
