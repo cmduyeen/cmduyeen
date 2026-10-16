@@ -7,7 +7,7 @@
 
 ### My Stuff
 
-> Repositories are grouped automatically by GitHub Topics prefixed with `category-`, such as `category-browser-extension`.
+> Each repository appears once, grouped by its primary software type. Add one `type-...` GitHub Topic, such as `type-browser-extension` or `type-theme`, to create or join a group. Existing `category-...` topics remain supported and are reduced to one primary group.
 
 <!-- MY-STUFF:START -->
 <details>
@@ -65,10 +65,10 @@
 
 ---
 
-### My Blog
+### Dyn | Notes
 
 <!-- BLOG-LINK:START -->
-> Notes and thoughts at [my blog](https://cmduyeen.github.io/)
+> Notes on software, automation, and things I learn: [Visit Dyn | Notes](https://cmduyeen.github.io/)
 <!-- BLOG-LINK:END -->
 
 <!-- BLOG-POST-LIST:START -->

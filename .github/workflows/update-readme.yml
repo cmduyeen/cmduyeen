@@ -50,19 +50,41 @@ jobs:
                 continue;
               }
 
-              for (const topic of repo.topics || []) {
-                if (!topic.startsWith('category-') || topic.length === 'category-'.length) {
-                  continue;
-                }
-                if (!groups.has(topic)) groups.set(topic, []);
-                groups.get(topic).push(repo);
+              const types = (repo.topics || [])
+                .filter((topic) => topic.startsWith('type-') && topic.length > 'type-'.length);
+              if (types.length > 1) {
+                throw new Error(`${repo.full_name} has multiple type- topics; keep exactly one primary software type.`);
               }
+              const legacyCategories = (repo.topics || [])
+                .filter((topic) => topic.startsWith('category-') && topic.length > 'category-'.length);
+              if (types.length === 0 && legacyCategories.length === 0) {
+                continue;
+              }
+
+              const legacyPriority = [
+                'category-theme',
+                'category-browser-extension',
+                'category-calendar',
+                'category-file-management',
+                'category-windows-utility',
+                'category-command-line',
+                'category-productivity'
+              ];
+              const type = types[0] || legacyCategories.sort((a, b) => {
+                const aPriority = legacyPriority.indexOf(a);
+                const bPriority = legacyPriority.indexOf(b);
+                return (aPriority === -1 ? Number.MAX_SAFE_INTEGER : aPriority) -
+                  (bPriority === -1 ? Number.MAX_SAFE_INTEGER : bPriority) ||
+                  a.localeCompare(b, 'en', { sensitivity: 'base' });
+              })[0].replace(/^category-/, 'type-');
+              if (!groups.has(type)) groups.set(type, []);
+              groups.get(type).push(repo);
             }
 
             const generatedGroups = [...groups.entries()]
               .sort(([a], [b]) => a.localeCompare(b, 'en', { sensitivity: 'base' }))
-              .map(([topic, matchingRepos]) => {
-                const title = topic.slice('category-'.length).split('-')
+              .map(([type, matchingRepos]) => {
+                const title = type.slice('type-'.length).split('-')
                   .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
                   .join(' ');
                 const list = matchingRepos
@@ -72,13 +94,13 @@ jobs:
 
                 return `<details>\n<summary><b>${title}</b></summary>\n\n${list}\n\n</details>`;
               })
-              .join('\n\n') || '* Add a `category-...` GitHub Topic to a repository to create a group automatically.';
+              .join('\n\n') || '* Add one primary `type-...` GitHub Topic to a repository to create groups automatically.';
 
             readme = replaceSection(readme, 'MY-STUFF', generatedGroups);
 
             const blogUrl = process.env.BLOG_URL;
             const blogLink = blogUrl
-              ? `> Notes and thoughts at [my blog](${blogUrl})`
+              ? `> Notes on software, automation, and things I learn: [Visit Dyn | Notes](${blogUrl})`
               : '> Blog not configured yet. Add the repository variables `BLOG_URL` and `BLOG_FEED_URL` when it is ready.';
             readme = replaceSection(readme, 'BLOG-LINK', blogLink);
 
@@ -89,7 +111,7 @@ jobs:
         uses: gautamkrishnar/blog-post-workflow@v1
         with:
           feed_list: ${{ vars.BLOG_FEED_URL || 'https://cmduyeen.github.io/index.xml' }}
-          max_post_count: 4
+          max_post_count: 5
           date_format: 'yyyy-mm-dd'
           template: '$newline* `$date` — [$title]($url)$newline'
 
