@@ -14,7 +14,6 @@
 <summary><b>Browser Extension</b></summary>
 
 * [Focus-Assistant-Extension](https://github.com/cmduyeen/Focus-Assistant-Extension)
-* [Pinkie---Cute-Kawaii-Pink-Theme-Customizer](https://github.com/cmduyeen/Pinkie---Cute-Kawaii-Pink-Theme-Customizer)
 
 </details>
 
@@ -28,7 +27,6 @@
 <details>
 <summary><b>Command Line</b></summary>
 
-* [CleanWindowsCMD-Free-Safe](https://github.com/cmduyeen/CleanWindowsCMD-Free-Safe)
 * [Pomodoro-Timer-PowerShell](https://github.com/cmduyeen/Pomodoro-Timer-PowerShell)
 
 </details>
@@ -37,14 +35,6 @@
 <summary><b>File Management</b></summary>
 
 * [python-file-organizer-robot](https://github.com/cmduyeen/python-file-organizer-robot)
-
-</details>
-
-<details>
-<summary><b>Productivity</b></summary>
-
-* [Focus-Assistant-Extension](https://github.com/cmduyeen/Focus-Assistant-Extension)
-* [Pomodoro-Timer-PowerShell](https://github.com/cmduyeen/Pomodoro-Timer-PowerShell)
 
 </details>
 
