@@ -68,7 +68,7 @@
 ### My Blog
 
 <!-- BLOG-LINK:START -->
-> Notes on software, automation, and things I learn: [Dyn | Notes](https://cmduyeen.github.io/).
+> Notes and thoughts at [my blog](https://cmduyeen.github.io/)
 <!-- BLOG-LINK:END -->
 
 <!-- BLOG-POST-LIST:START -->
