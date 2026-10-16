@@ -7,10 +7,10 @@
 
 ### My Stuff
 
-> Nhóm được tạo tự động từ Topic có tiền tố `stuff-` trên các repo công khai. Ví dụ: `stuff-browser-extensions`.
+> Repositories are grouped automatically by GitHub Topics prefixed with `category-`, such as `category-browser-extension`.
 
 <!-- MY-STUFF:START -->
-* Thêm Topic dạng `stuff-ten-nhom` vào repo để tự tạo nhóm hiển thị.
+* Add a `category-...` GitHub Topic to a repository to create a group automatically.
 <!-- MY-STUFF:END -->
 
 ---
@@ -18,9 +18,9 @@
 ### My Blog
 
 <!-- BLOG-LINK:START -->
-> Blog chưa được cấu hình. Khi blog sẵn sàng, thêm repository variables `BLOG_URL` và `BLOG_FEED_URL`.
+> Blog not configured yet. Add the repository variables `BLOG_URL` and `BLOG_FEED_URL` when it is ready.
 <!-- BLOG-LINK:END -->
 
 <!-- BLOG-POST-LIST:START -->
-* *Chưa có bài viết.*
+* *No posts yet.*
 <!-- BLOG-POST-LIST:END -->
