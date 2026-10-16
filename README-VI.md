@@ -13,42 +13,42 @@
 <details>
 <summary><b>Tiện ích trình duyệt</b></summary>
 
-* [Focus-Assistant-Extension](https://github.com/cmduyeen/Focus-Assistant-Extension)
+<table><tr><td valign="middle"><a href="https://github.com/cmduyeen/Focus-Assistant-Extension"><strong>Focus-Assistant-Extension</strong></a></td><td width="190" align="right"><a href="https://github.com/cmduyeen/Focus-Assistant-Extension"><img src="assets/project-cards/999256270.svg" alt="Focus-Assistant-Extension project preview" width="180"></a></td></tr></table>
 
 </details>
 
 <details>
 <summary><b>Lịch</b></summary>
 
-* [lich-am-viet-nam](https://github.com/cmduyeen/lich-am-viet-nam)
+<table><tr><td valign="middle"><a href="https://github.com/cmduyeen/lich-am-viet-nam"><strong>lich-am-viet-nam</strong></a></td><td width="190" align="right"><a href="https://github.com/cmduyeen/lich-am-viet-nam"><img src="assets/project-cards/1218670583.svg" alt="lich-am-viet-nam project preview" width="180"></a></td></tr></table>
 
 </details>
 
 <details>
 <summary><b>Dòng lệnh</b></summary>
 
-* [Pomodoro-Timer-PowerShell](https://github.com/cmduyeen/Pomodoro-Timer-PowerShell)
+<table><tr><td valign="middle"><a href="https://github.com/cmduyeen/Pomodoro-Timer-PowerShell"><strong>Pomodoro-Timer-PowerShell</strong></a></td><td width="190" align="right"><a href="https://github.com/cmduyeen/Pomodoro-Timer-PowerShell"><img src="assets/project-cards/996030014.svg" alt="Pomodoro-Timer-PowerShell project preview" width="180"></a></td></tr></table>
 
 </details>
 
 <details>
 <summary><b>Quản lý tệp</b></summary>
 
-* [python-file-organizer-robot](https://github.com/cmduyeen/python-file-organizer-robot)
+<table><tr><td valign="middle"><a href="https://github.com/cmduyeen/python-file-organizer-robot"><strong>python-file-organizer-robot</strong></a></td><td width="190" align="right"><a href="https://github.com/cmduyeen/python-file-organizer-robot"><img src="assets/project-cards/1191381112.svg" alt="python-file-organizer-robot project preview" width="180"></a></td></tr></table>
 
 </details>
 
 <details>
 <summary><b>Giao diện</b></summary>
 
-* [Pinkie---Cute-Kawaii-Pink-Theme-Customizer](https://github.com/cmduyeen/Pinkie---Cute-Kawaii-Pink-Theme-Customizer)
+<table><tr><td valign="middle"><a href="https://github.com/cmduyeen/Pinkie---Cute-Kawaii-Pink-Theme-Customizer"><strong>Pinkie---Cute-Kawaii-Pink-Theme-Customizer</strong></a></td><td width="190" align="right"><a href="https://github.com/cmduyeen/Pinkie---Cute-Kawaii-Pink-Theme-Customizer"><img src="assets/project-cards/1306168251.svg" alt="Pinkie---Cute-Kawaii-Pink-Theme-Customizer project preview" width="180"></a></td></tr></table>
 
 </details>
 
 <details>
 <summary><b>Tiện ích Windows</b></summary>
 
-* [CleanWindowsCMD-Free-Safe](https://github.com/cmduyeen/CleanWindowsCMD-Free-Safe)
+<table><tr><td valign="middle"><a href="https://github.com/cmduyeen/CleanWindowsCMD-Free-Safe"><strong>CleanWindowsCMD-Free-Safe</strong></a></td><td width="190" align="right"><a href="https://github.com/cmduyeen/CleanWindowsCMD-Free-Safe"><img src="assets/project-cards/963702476.svg" alt="CleanWindowsCMD-Free-Safe project preview" width="180"></a></td></tr></table>
 
 </details>
 <!-- MY-STUFF:END -->
