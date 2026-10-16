@@ -14,6 +14,7 @@
 <summary><b>Browser Extension</b></summary>
 
 * [Focus-Assistant-Extension](https://github.com/cmduyeen/Focus-Assistant-Extension)
+* [Pinkie---Cute-Kawaii-Pink-Theme-Customizer](https://github.com/cmduyeen/Pinkie---Cute-Kawaii-Pink-Theme-Customizer)
 
 </details>
 
