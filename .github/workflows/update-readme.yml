@@ -118,6 +118,22 @@ jobs:
               theme: 'Giao diện',
               'windows utility': 'Tiện ích Windows'
             };
+            const escapeHtml = (value) => String(value).replace(/[&<>"']/g, (character) => ({
+              '&': '&amp;',
+              '<': '&lt;',
+              '>': '&gt;',
+              '"': '&quot;',
+              "'": '&#39;'
+            })[character]);
+            const projectCardDirectory = 'assets/project-cards';
+            const projectPalette = [
+              ['#0f766e', '#2dd4bf'],
+              ['#1d4ed8', '#60a5fa'],
+              ['#6d28d9', '#c084fc'],
+              ['#be123c', '#fb7185'],
+              ['#a16207', '#facc15'],
+              ['#334155', '#94a3b8']
+            ];
             const renderGroups = (language) => [...groups.entries()]
               .sort(([a], [b]) => a.localeCompare(b, 'en', { sensitivity: 'base' }))
               .map(([type, matchingRepos]) => {
@@ -127,12 +143,29 @@ jobs:
                 const title = language === 'vi'
                   ? categoryTranslations[englishTitle.toLowerCase()] || englishTitle
                   : englishTitle;
-                const list = matchingRepos
+                const cards = matchingRepos
                   .sort((a, b) => a.name.localeCompare(b.name, 'en', { sensitivity: 'base' }))
-                  .map((repo) => `* [${repo.name}](${repo.html_url})`)
-                  .join('\n');
+                  .map((repo) => {
+                    const hash = [...repo.full_name].reduce(
+                      (value, character) => (value * 31 + character.charCodeAt(0)) >>> 0,
+                      0
+                    );
+                    const [startColor, endColor] = projectPalette[hash % projectPalette.length];
+                    const initials = repo.name.split(/[^a-z0-9]+/i)
+                      .filter(Boolean)
+                      .map((part) => part[0])
+                      .join('')
+                      .slice(0, 3)
+                      .toUpperCase() || repo.name.slice(0, 2).toUpperCase();
+                    const image = `${projectCardDirectory}/${repo.id}.svg`;
+                    const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="480" height="270" viewBox="0 0 480 270"><defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="${startColor}"/><stop offset="100%" stop-color="${endColor}"/></linearGradient></defs><rect width="480" height="270" rx="24" fill="#0f172a"/><rect x="8" y="8" width="464" height="254" rx="20" fill="url(#bg)" opacity=".94"/><circle cx="414" cy="62" r="72" fill="#fff" opacity=".1"/><circle cx="62" cy="250" r="104" fill="#0f172a" opacity=".12"/><path d="M340 245 472 113v149H340z" fill="#fff" opacity=".1"/><text x="34" y="156" fill="#fff" font-family="Arial,sans-serif" font-size="84" font-weight="700" letter-spacing="-4">${escapeHtml(initials)}</text><text x="38" y="211" fill="#fff" font-family="Arial,sans-serif" font-size="18" font-weight="600" opacity=".9">${escapeHtml(englishTitle)}</text></svg>`;
+                    fs.mkdirSync(projectCardDirectory, { recursive: true });
+                    fs.writeFileSync(image, svg);
+                    return `<table><tr><td valign="middle"><a href="${repo.html_url}"><strong>${escapeHtml(repo.name)}</strong></a></td><td width="190" align="right"><a href="${repo.html_url}"><img src="${image}" alt="${escapeHtml(repo.name)} project preview" width="180"></a></td></tr></table>`;
+                  })
+                  .join('\n\n');
 
-                return `<details>\n<summary><b>${title}</b></summary>\n\n${list}\n\n</details>`;
+                return `<details>\n<summary><b>${title}</b></summary>\n\n${cards}\n\n</details>`;
               })
               .join('\n\n') || (language === 'vi'
                 ? '* Thêm một GitHub Topic chính có dạng `type-...` vào repository để tự động tạo nhóm.'
@@ -160,6 +193,9 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add README.md README-VI.md
+          if [ -d assets/project-cards ]; then
+            git add assets/project-cards/
+          fi
           if ! git diff --cached --quiet; then
             git commit -m "chore: update profile README"
             git push
