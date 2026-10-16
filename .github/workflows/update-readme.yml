@@ -1,0 +1,118 @@
+name: Update profile README
+
+on:
+  schedule:
+    # Run daily at 00:17 ICT.
+    - cron: '17 17 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Update repository lists and blog link
+        uses: actions/github-script@v7
+        env:
+          BLOG_URL: ${{ vars.BLOG_URL }}
+        with:
+          script: |
+            const fs = require('fs');
+            const owner = context.repo.owner;
+            const repos = await github.paginate(github.rest.repos.listForUser, {
+              username: owner,
+              type: 'owner',
+              per_page: 100
+            });
+
+            const markdownSpecials = new Set([
+              '\\', '`', '*', '_', '{', '}', '[', ']', '(', ')',
+              '#', '+', '.', '!', '|', '>', '-'
+            ]);
+            const escapeMarkdown = (value) =>
+              [...value].map((char) =>
+                markdownSpecials.has(char) ? `\\${char}` : char
+              ).join('');
+
+            let readme = fs.readFileSync('README.md', 'utf8');
+            const replaceSection = (content, marker, value) => {
+              const regex = new RegExp(`(<!-- ${marker}:START -->)[\\s\\S]*?(<!-- ${marker}:END -->)`);
+              if (!regex.test(content)) {
+                throw new Error(`README is missing markers for ${marker}`);
+              }
+              return content.replace(regex, (_match, start, end) => `${start}\n${value}\n${end}`);
+            };
+
+            const groups = new Map();
+            for (const repo of repos) {
+              if (
+                repo.name.toLowerCase() === context.repo.repo.toLowerCase() ||
+                repo.private ||
+                repo.archived ||
+                repo.fork
+              ) {
+                continue;
+              }
+
+              for (const topic of repo.topics || []) {
+                if (!topic.startsWith('stuff-') || topic.length === 'stuff-'.length) {
+                  continue;
+                }
+                if (!groups.has(topic)) groups.set(topic, []);
+                groups.get(topic).push(repo);
+              }
+            }
+
+            const generatedGroups = [...groups.entries()]
+              .sort(([a], [b]) => a.localeCompare(b, 'en', { sensitivity: 'base' }))
+              .map(([topic, matchingRepos]) => {
+                const title = topic.split('-')
+                  .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+                  .join(' ');
+                const list = matchingRepos
+                  .sort((a, b) => a.name.localeCompare(b.name, 'en', { sensitivity: 'base' }))
+                  .map((repo) => {
+                    const description = repo.description
+                      ? ` — ${escapeMarkdown(repo.description.replace(/\s+/g, ' ').trim())}`
+                      : '';
+                    return `* [${repo.name}](${repo.html_url})${description}`;
+                  })
+                  .join('\n');
+
+                return `<details>\n<summary><b>${title}</b></summary>\n\n${list}\n\n</details>`;
+              })
+              .join('\n\n') || '* Thêm Topic dạng `stuff-ten-nhom` vào repo để tự tạo nhóm hiển thị.*';
+
+            readme = replaceSection(readme, 'MY-STUFF', generatedGroups);
+
+            const blogUrl = process.env.BLOG_URL;
+            const blogLink = blogUrl
+              ? `> Notes and thoughts at [my blog](${blogUrl})`
+              : '> Blog chưa được cấu hình. Khi blog sẵn sàng, thêm repository variables `BLOG_URL` và `BLOG_FEED_URL`.';
+            readme = replaceSection(readme, 'BLOG-LINK', blogLink);
+
+            fs.writeFileSync('README.md', readme);
+
+      - name: Update blog posts
+        if: ${{ vars.BLOG_FEED_URL != '' }}
+        uses: gautamkrishnar/blog-post-workflow@v1
+        with:
+          feed_list: ${{ vars.BLOG_FEED_URL }}
+          max_post_count: 4
+          date_format: 'yyyy-mm-dd'
+          template: '* `$date` — [$title]($url)$newline'
+
+      - name: Commit README changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: update profile README"
+            git push
+          fi
