@@ -7,6 +7,8 @@
 
 ### My Stuff
 
+> Repositories are grouped automatically by GitHub Topics prefixed with `category-`, such as `category-browser-extension`.
+
 <!-- MY-STUFF:START -->
 <details>
 <summary><b>Browser Extension</b></summary>
@@ -66,7 +68,7 @@
 ### My Blog
 
 <!-- BLOG-LINK:START -->
-> Blog not configured yet. Add the repository variables `BLOG_URL` and `BLOG_FEED_URL` when it is ready.
+> Notes on software, automation, and things I learn: [Dyn | Notes](https://cmduyeen.github.io/).
 <!-- BLOG-LINK:END -->
 
 <!-- BLOG-POST-LIST:START -->

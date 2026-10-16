@@ -19,7 +19,7 @@ jobs:
       - name: Update repository lists and blog link
         uses: actions/github-script@v7
         env:
-          BLOG_URL: ${{ vars.BLOG_URL }}
+          BLOG_URL: ${{ vars.BLOG_URL || 'https://cmduyeen.github.io/' }}
         with:
           script: |
             const fs = require('fs');
@@ -85,10 +85,10 @@ jobs:
             fs.writeFileSync('README.md', readme);
 
       - name: Update blog posts
-        if: ${{ vars.BLOG_FEED_URL != '' }}
+        if: ${{ vars.BLOG_FEED_URL != '' || vars.BLOG_URL == '' }}
         uses: gautamkrishnar/blog-post-workflow@v1
         with:
-          feed_list: ${{ vars.BLOG_FEED_URL }}
+          feed_list: ${{ vars.BLOG_FEED_URL || 'https://cmduyeen.github.io/index.xml' }}
           max_post_count: 4
           date_format: 'yyyy-mm-dd'
           template: '* `$date` — [$title]($url)$newline'
