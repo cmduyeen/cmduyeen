@@ -165,7 +165,7 @@ jobs:
                   })
                   .join('\n\n');
 
-                return `<details>\n<summary><b>${title}</b></summary>\n\n${cards}\n\n</details>`;
+                return `#### ${title}\n\n${cards}`;
               })
               .join('\n\n') || (language === 'vi'
                 ? '* Thêm một GitHub Topic chính có dạng `type-...` vào repository để tự động tạo nhóm.'
