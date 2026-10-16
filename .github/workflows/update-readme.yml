@@ -114,6 +114,8 @@ jobs:
           max_post_count: 5
           date_format: 'yyyy-mm-dd'
           template: '$newline* `$date` — [$title]($url)$newline'
+          skip_commit: true
+          enable_keepalive: false
 
       - name: Commit README changes
         run: |
