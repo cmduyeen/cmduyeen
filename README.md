@@ -1,3 +1,5 @@
+**English** | [Tiếng Việt](README-VI.md)
+
 ### About me
 
 * **MBTI:** [ISFJ](https://www.16personalities.com/isfj-personality) — *quite similar to [these characters](https://www.personality-database.com/profile?personality=3).*
