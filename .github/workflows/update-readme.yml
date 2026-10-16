@@ -80,7 +80,7 @@ jobs:
                     const description = repo.description
                       ? ` — ${escapeMarkdown(repo.description.replace(/\s+/g, ' ').trim())}`
                       : '';
-                    return `* <a href="${repo.html_url}" target="_blank" rel="noopener noreferrer">${repo.name}</a>${description}`;
+                    return `* [${repo.name}](${repo.html_url})${description}`;
                   })
                   .join('\n');
 
@@ -92,7 +92,7 @@ jobs:
 
             const blogUrl = process.env.BLOG_URL;
             const blogLink = blogUrl
-              ? `> Notes and thoughts at <a href="${blogUrl}" target="_blank" rel="noopener noreferrer">my blog</a>`
+              ? `> Notes and thoughts at [my blog](${blogUrl})`
               : '> Blog chưa được cấu hình. Khi blog sẵn sàng, thêm repository variables `BLOG_URL` và `BLOG_FEED_URL`.';
             readme = replaceSection(readme, 'BLOG-LINK', blogLink);
 
@@ -105,7 +105,7 @@ jobs:
           feed_list: ${{ vars.BLOG_FEED_URL }}
           max_post_count: 4
           date_format: 'yyyy-mm-dd'
-          template: '* `$date` — <a href="$url" target="_blank" rel="noopener noreferrer">$title</a>$newline'
+          template: '* `$date` — [$title]($url)$newline'
 
       - name: Commit README changes
         run: |

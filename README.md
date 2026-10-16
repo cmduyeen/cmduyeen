@@ -1,6 +1,6 @@
 ### About me
 
-* **MBTI:** <a href="https://www.16personalities.com/isfj-personality" target="_blank" rel="noopener noreferrer">ISFJ</a> — *quite similar to <a href="https://www.personality-database.com/profile?personality=3" target="_blank" rel="noopener noreferrer">these characters</a>.*
+* **MBTI:** [ISFJ](https://www.16personalities.com/isfj-personality) — *quite similar to [these characters](https://www.personality-database.com/profile?personality=3).*
 * **Things I enjoy:** Reading [books](#), learning to [code](#), and watching [movies](#).
 
 ---
