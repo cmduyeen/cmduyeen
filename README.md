@@ -10,7 +10,7 @@
 > Nhóm được tạo tự động từ Topic có tiền tố `stuff-` trên các repo công khai. Ví dụ: `stuff-browser-extensions`.
 
 <!-- MY-STUFF:START -->
-* Thêm Topic dạng `stuff-ten-nhom` vào repo để tự tạo nhóm hiển thị.*
+* Thêm Topic dạng `stuff-ten-nhom` vào repo để tự tạo nhóm hiển thị.
 <!-- MY-STUFF:END -->
 
 ---
