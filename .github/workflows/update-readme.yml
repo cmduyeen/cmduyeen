@@ -86,7 +86,7 @@ jobs:
 
                 return `<details>\n<summary><b>${title}</b></summary>\n\n${list}\n\n</details>`;
               })
-              .join('\n\n') || '* Thêm Topic dạng `stuff-ten-nhom` vào repo để tự tạo nhóm hiển thị.*';
+              .join('\n\n') || '* Thêm Topic dạng `stuff-ten-nhom` vào repo để tự tạo nhóm hiển thị.';
 
             readme = replaceSection(readme, 'MY-STUFF', generatedGroups);
 
