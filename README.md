@@ -13,31 +13,26 @@
 
 - [Focus-Assistant-Extension](https://github.com/cmduyeen/Focus-Assistant-Extension)
 </details>
-
 <details>
 <summary><strong>Calendar</strong></summary>
 
 - [lich-am-viet-nam](https://github.com/cmduyeen/lich-am-viet-nam)
 </details>
-
 <details>
 <summary><strong>Command Line</strong></summary>
 
 - [Pomodoro-Timer-PowerShell](https://github.com/cmduyeen/Pomodoro-Timer-PowerShell)
 </details>
-
 <details>
 <summary><strong>File Management</strong></summary>
 
 - [python-file-organizer-robot](https://github.com/cmduyeen/python-file-organizer-robot)
 </details>
-
 <details>
 <summary><strong>Theme</strong></summary>
 
 - [Pinkie---Cute-Kawaii-Pink-Theme-Customizer](https://github.com/cmduyeen/Pinkie---Cute-Kawaii-Pink-Theme-Customizer)
 </details>
-
 <details>
 <summary><strong>Windows Utility</strong></summary>
 
