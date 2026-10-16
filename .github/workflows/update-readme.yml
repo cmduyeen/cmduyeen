@@ -24,20 +24,7 @@ jobs:
           max_post_count: 5
           date_format: 'yyyy-mm-dd'
           custom_tags: 'image/image/'
-          template: '$newline<table><tr><td width="190"><a href="$url"><img src="$image" alt="$title" width="180"></a></td><td><a href="$url"><strong>$title</strong></a><br><sub>$date</sub></td></tr></table>$newline'
-          skip_commit: true
-          enable_keepalive: false
-
-      - name: Update Vietnamese blog posts
-        if: ${{ vars.BLOG_FEED_URL_VI != '' || vars.BLOG_URL == '' }}
-        uses: gautamkrishnar/blog-post-workflow@v1
-        with:
-          readme_path: README-VI.md
-          feed_list: ${{ vars.BLOG_FEED_URL_VI || 'https://cmduyeen.github.io/vi/index.xml' }}
-          max_post_count: 5
-          date_format: 'yyyy-mm-dd'
-          custom_tags: 'image/image/'
-          template: '$newline<table><tr><td width="190"><a href="$url"><img src="$image" alt="$title" width="180"></a></td><td><a href="$url"><strong>$title</strong></a><br><sub>$date</sub></td></tr></table>$newline'
+          template: '$newline<table><tr><td width="190" height="120" valign="middle"><a href="$url"><img src="$image" alt="$title" width="180" height="113"></a></td><td height="120" valign="middle"><a href="$url"><strong>$title</strong></a><br><sub>$date</sub></td></tr></table>$newline'
           skip_commit: true
           enable_keepalive: false
 
@@ -54,11 +41,8 @@ jobs:
               type: 'owner',
               per_page: 100
             });
+            let readme = fs.readFileSync('README.md', 'utf8');
 
-            const readmes = {
-              en: fs.readFileSync('README.md', 'utf8'),
-              vi: fs.readFileSync('README-VI.md', 'utf8')
-            };
             const replaceSection = (content, marker, value) => {
               const regex = new RegExp(`(<!-- ${marker}:START -->)[\\s\\S]*?(<!-- ${marker}:END -->)`);
               if (!regex.test(content)) {
@@ -68,6 +52,15 @@ jobs:
             };
 
             const groups = new Map();
+            const legacyPriority = [
+              'category-theme',
+              'category-browser-extension',
+              'category-calendar',
+              'category-file-management',
+              'category-windows-utility',
+              'category-command-line',
+              'category-productivity'
+            ];
             for (const repo of repos) {
               if (
                 repo.name.toLowerCase() === context.repo.repo.toLowerCase() ||
@@ -78,27 +71,15 @@ jobs:
                 continue;
               }
 
-              const types = (repo.topics || [])
-                .filter((topic) => topic.startsWith('type-') && topic.length > 'type-'.length);
+              const topics = repo.topics || [];
+              const types = topics.filter((topic) => topic.startsWith('type-') && topic.length > 5);
               if (types.length > 1) {
                 throw new Error(`${repo.full_name} has multiple type- topics; keep exactly one primary software type.`);
               }
-              const legacyCategories = (repo.topics || [])
-                .filter((topic) => topic.startsWith('category-') && topic.length > 'category-'.length);
-              if (types.length === 0 && legacyCategories.length === 0) {
-                continue;
-              }
+              const categories = topics.filter((topic) => topic.startsWith('category-') && topic.length > 9);
+              if (types.length === 0 && categories.length === 0) continue;
 
-              const legacyPriority = [
-                'category-theme',
-                'category-browser-extension',
-                'category-calendar',
-                'category-file-management',
-                'category-windows-utility',
-                'category-command-line',
-                'category-productivity'
-              ];
-              const type = types[0] || legacyCategories.sort((a, b) => {
+              const type = types[0] || categories.sort((a, b) => {
                 const aPriority = legacyPriority.indexOf(a);
                 const bPriority = legacyPriority.indexOf(b);
                 return (aPriority === -1 ? Number.MAX_SAFE_INTEGER : aPriority) -
@@ -109,94 +90,36 @@ jobs:
               groups.get(type).push(repo);
             }
 
-            const categoryTranslations = {
-              'browser extension': 'Tiện ích trình duyệt',
-              calendar: 'Lịch',
-              'command line': 'Dòng lệnh',
-              'file management': 'Quản lý tệp',
-              productivity: 'Năng suất',
-              theme: 'Giao diện',
-              'windows utility': 'Tiện ích Windows'
-            };
-            const escapeHtml = (value) => String(value).replace(/[&<>"']/g, (character) => ({
-              '&': '&amp;',
-              '<': '&lt;',
-              '>': '&gt;',
-              '"': '&quot;',
-              "'": '&#39;'
-            })[character]);
-            const projectCardDirectory = 'assets/project-cards';
-            const projectPalette = [
-              ['#0f766e', '#2dd4bf'],
-              ['#1d4ed8', '#60a5fa'],
-              ['#6d28d9', '#c084fc'],
-              ['#be123c', '#fb7185'],
-              ['#a16207', '#facc15'],
-              ['#334155', '#94a3b8']
-            ];
-            const renderGroups = (language) => [...groups.entries()]
+            const generatedGroups = [...groups.entries()]
               .sort(([a], [b]) => a.localeCompare(b, 'en', { sensitivity: 'base' }))
               .map(([type, matchingRepos]) => {
-                const englishTitle = type.slice('type-'.length).split('-')
+                const title = type.slice('type-'.length).split('-')
                   .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
                   .join(' ');
-                const title = language === 'vi'
-                  ? categoryTranslations[englishTitle.toLowerCase()] || englishTitle
-                  : englishTitle;
-                const cards = matchingRepos
+                const list = matchingRepos
                   .sort((a, b) => a.name.localeCompare(b.name, 'en', { sensitivity: 'base' }))
-                  .map((repo) => {
-                    const hash = [...repo.full_name].reduce(
-                      (value, character) => (value * 31 + character.charCodeAt(0)) >>> 0,
-                      0
-                    );
-                    const [startColor, endColor] = projectPalette[hash % projectPalette.length];
-                    const initials = repo.name.split(/[^a-z0-9]+/i)
-                      .filter(Boolean)
-                      .map((part) => part[0])
-                      .join('')
-                      .slice(0, 3)
-                      .toUpperCase() || repo.name.slice(0, 2).toUpperCase();
-                    const image = `${projectCardDirectory}/${repo.id}.svg`;
-                    const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="480" height="270" viewBox="0 0 480 270"><defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="${startColor}"/><stop offset="100%" stop-color="${endColor}"/></linearGradient></defs><rect width="480" height="270" rx="24" fill="#0f172a"/><rect x="8" y="8" width="464" height="254" rx="20" fill="url(#bg)" opacity=".94"/><circle cx="414" cy="62" r="72" fill="#fff" opacity=".1"/><circle cx="62" cy="250" r="104" fill="#0f172a" opacity=".12"/><path d="M340 245 472 113v149H340z" fill="#fff" opacity=".1"/><text x="34" y="156" fill="#fff" font-family="Arial,sans-serif" font-size="84" font-weight="700" letter-spacing="-4">${escapeHtml(initials)}</text><text x="38" y="211" fill="#fff" font-family="Arial,sans-serif" font-size="18" font-weight="600" opacity=".9">${escapeHtml(englishTitle)}</text></svg>`;
-                    fs.mkdirSync(projectCardDirectory, { recursive: true });
-                    fs.writeFileSync(image, svg);
-                    return `<table><tr><td valign="middle"><a href="${repo.html_url}"><strong>${escapeHtml(repo.name)}</strong></a></td><td width="190" align="right"><a href="${repo.html_url}"><img src="${image}" alt="${escapeHtml(repo.name)} project preview" width="180"></a></td></tr></table>`;
-                  })
-                  .join('\n\n');
-
-                return `#### ${title}\n\n${cards}`;
+                  .map((repo) => `* [${repo.name}](${repo.html_url})`)
+                  .join('\n');
+                return `#### ${title}\n\n${list}`;
               })
-              .join('\n\n') || (language === 'vi'
-                ? '* Thêm một GitHub Topic chính có dạng `type-...` vào repository để tự động tạo nhóm.'
-                : '* Add one primary `type-...` GitHub Topic to a repository to create groups automatically.');
+              .join('\n\n') || '* Add one primary `type-...` GitHub Topic to a repository to create groups automatically.';
 
-            readmes.en = replaceSection(readmes.en, 'MY-STUFF', renderGroups('en'));
-            readmes.vi = replaceSection(readmes.vi, 'MY-STUFF', renderGroups('vi'));
-
+            readme = replaceSection(readme, 'MY-STUFF', generatedGroups);
             const blogUrl = process.env.BLOG_URL;
-            const englishBlogLink = blogUrl
+            const blogLink = blogUrl
               ? `> Software, automation, and learning notes: [Visit Dyn](${blogUrl})`
               : '> Blog not configured yet. Add the repository variables `BLOG_URL` and `BLOG_FEED_URL` when it is ready.';
-            const vietnameseBlogUrl = blogUrl ? `${blogUrl.replace(/\/+$/, '')}/vi/` : '';
-            const vietnameseBlogLink = vietnameseBlogUrl
-              ? `> Góc ghi chép về phần mềm, tự động hóa và những điều mình học được: [Đọc blog Dyn](${vietnameseBlogUrl})`
-              : '> Blog chưa được cấu hình. Thêm biến repository `BLOG_URL` và `BLOG_FEED_URL` khi blog sẵn sàng.';
-            readmes.en = replaceSection(readmes.en, 'BLOG-LINK', englishBlogLink);
-            readmes.vi = replaceSection(readmes.vi, 'BLOG-LINK', vietnameseBlogLink);
-
-            fs.writeFileSync('README.md', readmes.en);
-            fs.writeFileSync('README-VI.md', readmes.vi);
+            readme = replaceSection(readme, 'BLOG-LINK', blogLink);
+            fs.writeFileSync('README.md', readme);
 
       - name: Commit README changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add README.md README-VI.md
-          if [ -d assets/project-cards ]; then
-            git add assets/project-cards/
-          fi
+          git add README.md
+          git rm --ignore-unmatch README-VI.md
           if ! git diff --cached --quiet; then
-            git commit -m "chore: update profile README"
+            git commit -m "chore: simplify profile README" \
+              -m "Co-authored-by: Copilot <223556219+Copilot@users.noreply.github.com>"
             git push
           fi
