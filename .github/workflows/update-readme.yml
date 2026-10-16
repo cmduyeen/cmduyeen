@@ -91,7 +91,7 @@ jobs:
           feed_list: ${{ vars.BLOG_FEED_URL || 'https://cmduyeen.github.io/index.xml' }}
           max_post_count: 4
           date_format: 'yyyy-mm-dd'
-          template: '* `$date` — [$title]($url)$newline'
+          template: '$newline* `$date` — [$title]($url)$newline'
 
       - name: Commit README changes
         run: |
