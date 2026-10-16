@@ -7,8 +7,6 @@
 
 ### My Stuff
 
-> Repositories are grouped automatically by GitHub Topics prefixed with `category-`, such as `category-browser-extension`.
-
 <!-- MY-STUFF:START -->
 <details>
 <summary><b>Browser Extension</b></summary>
