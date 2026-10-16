@@ -8,29 +8,18 @@
 ### My Stuff
 
 <!-- MY-STUFF:START -->
-#### Browser Extension
-
-* [Focus-Assistant-Extension](https://github.com/cmduyeen/Focus-Assistant-Extension)
-
-#### Calendar
-
-* [lich-am-viet-nam](https://github.com/cmduyeen/lich-am-viet-nam)
-
-#### Command Line
-
-* [Pomodoro-Timer-PowerShell](https://github.com/cmduyeen/Pomodoro-Timer-PowerShell)
-
-#### File Management
-
-* [python-file-organizer-robot](https://github.com/cmduyeen/python-file-organizer-robot)
-
-#### Theme
-
-* [Pinkie---Cute-Kawaii-Pink-Theme-Customizer](https://github.com/cmduyeen/Pinkie---Cute-Kawaii-Pink-Theme-Customizer)
-
-#### Windows Utility
-
-* [CleanWindowsCMD-Free-Safe](https://github.com/cmduyeen/CleanWindowsCMD-Free-Safe)
+* **Browser Extension**
+  * [Focus-Assistant-Extension](https://github.com/cmduyeen/Focus-Assistant-Extension)
+* **Calendar**
+  * [lich-am-viet-nam](https://github.com/cmduyeen/lich-am-viet-nam)
+* **Command Line**
+  * [Pomodoro-Timer-PowerShell](https://github.com/cmduyeen/Pomodoro-Timer-PowerShell)
+* **File Management**
+  * [python-file-organizer-robot](https://github.com/cmduyeen/python-file-organizer-robot)
+* **Theme**
+  * [Pinkie---Cute-Kawaii-Pink-Theme-Customizer](https://github.com/cmduyeen/Pinkie---Cute-Kawaii-Pink-Theme-Customizer)
+* **Windows Utility**
+  * [CleanWindowsCMD-Free-Safe](https://github.com/cmduyeen/CleanWindowsCMD-Free-Safe)
 <!-- MY-STUFF:END -->
 
 ---
