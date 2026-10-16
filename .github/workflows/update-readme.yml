@@ -23,7 +23,8 @@ jobs:
           feed_list: ${{ vars.BLOG_FEED_URL || 'https://cmduyeen.github.io/index.xml' }}
           max_post_count: 5
           date_format: 'yyyy-mm-dd'
-          template: '$newline* `$date` — [$title]($url)$newline'
+          custom_tags: 'image/image/'
+          template: '$newline<table><tr><td width="190"><a href="$url"><img src="$image" alt="$title" width="180"></a></td><td><a href="$url"><strong>$title</strong></a><br><sub>$date</sub></td></tr></table>$newline'
           skip_commit: true
           enable_keepalive: false
 
@@ -111,7 +112,7 @@ jobs:
 
             const blogUrl = process.env.BLOG_URL;
             const blogLink = blogUrl
-              ? `> Notes on software, automation, and things I learn: [Visit Dyn | Notes](${blogUrl})`
+              ? `> Software, automation, and learning notes: [Visit Dyn](${blogUrl})`
               : '> Blog not configured yet. Add the repository variables `BLOG_URL` and `BLOG_FEED_URL` when it is ready.';
             readme = replaceSection(readme, 'BLOG-LINK', blogLink);
 
