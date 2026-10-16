@@ -67,7 +67,7 @@
 ### My Blog
 
 <!-- BLOG-LINK:START -->
-> Blog chưa được cấu hình. Khi blog sẵn sàng, thêm repository variables `BLOG_URL` và `BLOG_FEED_URL`.
+> Blog not configured yet. Add the repository variables `BLOG_URL` and `BLOG_FEED_URL` when it is ready.
 <!-- BLOG-LINK:END -->
 
 <!-- BLOG-POST-LIST:START -->
