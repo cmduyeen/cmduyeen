@@ -24,7 +24,7 @@ jobs:
           max_post_count: 5
           date_format: 'yyyy-mm-dd'
           custom_tags: 'image/image/'
-          template: '$newline<table width="100%"><tr><td width="190" height="120" valign="middle"><a href="$url"><img src="$image" alt="$title" width="180" height="113"></a></td><td height="120" valign="middle"><a href="$url"><strong>$title</strong></a><br><sub>$date</sub></td></tr></table>$newline'
+          template: '$newline<table width="100%"><tr><td width="190" height="120" valign="middle"><a href="$url"><img src="$image" alt="$title" width="180" height="113"></a></td><td width="468" height="120" valign="middle"><a href="$url"><strong>$title</strong></a><br><sub>$date</sub></td></tr></table>$newline'
           skip_commit: true
           enable_keepalive: false
 
