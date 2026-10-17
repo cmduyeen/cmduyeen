@@ -31,8 +31,6 @@
 <details>
 <summary><strong>Theme</strong></summary>
 
-- [Pinkie Products — all Pinkie apps and downloads](https://github.com/pinkie-theme/pinkie-products)
-- [Pinkie Theme](https://github.com/pinkie-theme/pinkie-theme)
 - [Pinkie---Cute-Kawaii-Pink-Theme-Customizer](https://github.com/cmduyeen/Pinkie---Cute-Kawaii-Pink-Theme-Customizer)
 </details>
 <details>
