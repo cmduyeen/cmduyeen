@@ -1,10 +1,20 @@
 name: Update profile README
 
 on:
+  # Safety net: chạy định kỳ hàng tuần vào Chủ nhật lúc 00:17 ICT (17:17 UTC)
+  # thay vì chạy hàng ngày gây lãng phí runner minutes của GitHub Actions.
   schedule:
-    # Run daily at 00:17 ICT.
-    - cron: '17 17 * * *'
+    - cron: '17 17 * * 0'
+  # Kích hoạt hướng sự kiện (Event-driven): Nhận webhook dispatch từ blog khi publish bài viết mới
+  repository_dispatch:
+    types: [blog_published, sync_profile]
+  # Kích hoạt thủ công qua GitHub Actions UI
   workflow_dispatch:
+
+# Tự động hủy các run cũ nếu có run mới kích hoạt, tránh chạy thừa và xung đột git
+concurrency:
+  group: profile-readme
+  cancel-in-progress: true
 
 permissions:
   contents: write
@@ -15,6 +25,8 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
 
       - name: Update blog posts
         if: ${{ vars.BLOG_FEED_URL != '' || vars.BLOG_URL == '' }}
@@ -117,9 +129,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add README.md
-          git rm --ignore-unmatch README-VI.md
           if ! git diff --cached --quiet; then
-            git commit -m "chore: simplify profile README" \
-              -m "Co-authored-by: Copilot <223556219+Copilot@users.noreply.github.com>"
+            git commit -m "chore: update profile README [skip ci]"
             git push
           fi
