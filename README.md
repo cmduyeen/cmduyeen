@@ -1,8 +1,8 @@
 # About
 
-I read, code, and cook.
+I [read](https://z-library.sk/profile/45325055/0f1fbf), [code](https://github.com/cmduyeen/code), and cook.
 
-ISFJ.
+[ISFJ](https://www.16personalities.com/isfj-personality).
 
 # My stuff
 
