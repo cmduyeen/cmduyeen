@@ -1,6 +1,6 @@
 # About
 
-I [read](https://z-library.sk/profile/45325055/0f1fbf), [code](https://github.com/cmduyeen/code), and cook.
+I [read](https://z-library.sk/profile/45325055/0f1fbf), [code](https://github.com/cmduyeen/self-study), and cook.
 
 [ISFJ](https://www.16personalities.com/isfj-personality).
 
