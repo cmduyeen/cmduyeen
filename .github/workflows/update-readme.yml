@@ -34,7 +34,7 @@ jobs:
           feed_list: ${{ vars.BLOG_FEED_URL || 'https://cmduyeen.github.io/index.xml' }}
           max_post_count: 5
           date_format: 'yyyy-mm-dd'
-          template: '- $date: [$title]($url)'
+          template: '- $date: [$title]($url)$newline'
           skip_commit: true
           enable_keepalive: false
 
