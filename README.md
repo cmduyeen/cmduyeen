@@ -7,12 +7,25 @@ I [read](https://z-library.sk/profile/45325055/0f1fbf), [code](https://github.co
 # My stuff
 
 <!-- MY-STUFF:START -->
-1. [CleanWindowsCMD-Free-Safe](https://github.com/cmduyeen/CleanWindowsCMD-Free-Safe)
-2. [Focus-Assistant-Extension](https://github.com/cmduyeen/Focus-Assistant-Extension)
-3. [lich-am-viet-nam](https://github.com/cmduyeen/lich-am-viet-nam)
-4. [pinkie-extension-styler](https://github.com/cmduyeen/pinkie-extension-styler)
-5. [Pomodoro-Timer-PowerShell](https://github.com/cmduyeen/Pomodoro-Timer-PowerShell)
-6. [python-file-organizer-robot](https://github.com/cmduyeen/python-file-organizer-robot)
+- [books](https://github.com/cmduyeen/books)
+- [chinese-lunar-calendar](https://github.com/cmduyeen/chinese-lunar-calendar)
+- [CleanWindowsCMD-Free-Safe](https://github.com/cmduyeen/CleanWindowsCMD-Free-Safe)
+- [cmduyeen.github.io](https://github.com/cmduyeen/cmduyeen.github.io)
+- [Focus-Assistant-Extension](https://github.com/cmduyeen/Focus-Assistant-Extension)
+- [lich-am-viet-nam](https://github.com/cmduyeen/lich-am-viet-nam)
+- [pinkie-chrome](https://github.com/cmduyeen/pinkie-chrome)
+- [pinkie-extension-styler](https://github.com/cmduyeen/pinkie-extension-styler)
+- [pinkie-obsidian](https://github.com/cmduyeen/pinkie-obsidian)
+- [pinkie-products](https://github.com/cmduyeen/pinkie-products)
+- [pinkie-smart-toc](https://github.com/cmduyeen/pinkie-smart-toc)
+- [pinkie-sumatrapdf](https://github.com/cmduyeen/pinkie-sumatrapdf)
+- [pinkie-terminal](https://github.com/cmduyeen/pinkie-terminal)
+- [pinkie-theme](https://github.com/cmduyeen/pinkie-theme)
+- [pinkie-vscode](https://github.com/cmduyeen/pinkie-vscode)
+- [pinkie-vscode-icons](https://github.com/cmduyeen/pinkie-vscode-icons)
+- [Pomodoro-Timer-PowerShell](https://github.com/cmduyeen/Pomodoro-Timer-PowerShell)
+- [python-file-organizer-robot](https://github.com/cmduyeen/python-file-organizer-robot)
+- [self-study](https://github.com/cmduyeen/self-study)
 <!-- MY-STUFF:END -->
 
 # Blog
