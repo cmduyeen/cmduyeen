@@ -140,16 +140,19 @@ def render_projects(repositories, profile_repo):
 
     grouped = {}
     for repository in visible:
-        year = parse_datetime(repository["created_at"]).year
-        grouped.setdefault(year, []).append(repository)
+        created = parse_datetime(repository["created_at"])
+        grouped.setdefault(created.year, {}).setdefault(created.month, []).append(repository)
 
     sections = []
     for year in sorted(grouped, reverse=True):
-        entries = [
-            f"{index}. [{repository['name']}]({repository['html_url']})"
-            for index, repository in enumerate(grouped[year], start=1)
-        ]
-        sections.append(f"### {year}\n" + "\n".join(entries))
+        month_sections = []
+        for month in sorted(grouped[year], reverse=True):
+            entries = [
+                f"`T{month:02d}-{index}` -> [{repository['name']}]({repository['html_url']})"
+                for index, repository in enumerate(grouped[year][month], start=1)
+            ]
+            month_sections.append(f"#### {calendar.month_abbr[month]}\n" + "\n".join(entries))
+        sections.append(f"### {year}\n" + "\n\n".join(month_sections))
     return "\n\n".join(sections) or "*No projects yet.*"
 
 

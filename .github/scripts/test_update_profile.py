@@ -9,10 +9,11 @@ import update_profile
 
 
 class UpdateProfileTests(unittest.TestCase):
-    def test_projects_are_grouped_newest_year_and_repo_first(self):
+    def test_projects_are_grouped_by_year_month_and_numbered_within_month(self):
         repositories = [
             {"name": "older", "created_at": "2025-01-01T00:00:00Z", "html_url": "https://example.com/older"},
-            {"name": "newer", "created_at": "2026-11-01T00:00:00Z", "html_url": "https://example.com/newer"},
+            {"name": "newest-november", "created_at": "2026-11-09T00:00:00Z", "html_url": "https://example.com/newest-november"},
+            {"name": "older-november", "created_at": "2026-11-01T00:00:00Z", "html_url": "https://example.com/older-november"},
             {"name": "middle", "created_at": "2026-02-01T00:00:00Z", "html_url": "https://example.com/middle"},
             {"name": "profile", "created_at": "2026-12-01T00:00:00Z", "html_url": "https://example.com/profile"},
             {"name": "secret", "private": True, "created_at": "2027-01-01T00:00:00Z", "html_url": "https://example.com/secret"},
@@ -22,9 +23,15 @@ class UpdateProfileTests(unittest.TestCase):
 
         self.assertEqual(
             result,
-            "### 2026\n1. [newer](https://example.com/newer)\n"
-            "2. [middle](https://example.com/middle)\n\n"
-            "### 2025\n1. [older](https://example.com/older)",
+            "### 2026\n"
+            "#### Nov\n"
+            "`T11-1` -> [newest-november](https://example.com/newest-november)\n"
+            "`T11-2` -> [older-november](https://example.com/older-november)\n\n"
+            "#### Feb\n"
+            "`T02-1` -> [middle](https://example.com/middle)\n\n"
+            "### 2025\n"
+            "#### Jan\n"
+            "`T01-1` -> [older](https://example.com/older)",
         )
 
     def test_month_range_contains_twelve_months_in_order(self):
