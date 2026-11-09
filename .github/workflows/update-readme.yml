@@ -9,16 +9,17 @@ on:
   push:
     paths:
       - '.github/workflows/update-readme.yml'
+      - '.github/scripts/update_profile.py'
   # Kích hoạt hướng sự kiện (Event-driven): Nhận webhook dispatch từ blog khi publish bài viết mới
   repository_dispatch:
     types: [blog_published, sync_profile]
   # Kích hoạt thủ công qua GitHub Actions UI
   workflow_dispatch:
 
-# Tự động hủy các run cũ nếu có run mới kích hoạt, tránh chạy thừa và xung đột git
+# Xếp hàng thay vì hủy run đang gọi API, tránh lãng phí lượt gọi.
 concurrency:
   group: profile-readme
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 permissions:
   contents: write
@@ -32,68 +33,18 @@ jobs:
         with:
           fetch-depth: 1
 
-      - name: Update blog posts
-        if: github.event_name != 'repository_dispatch' || github.event.action == 'blog_published'
-        uses: gautamkrishnar/blog-post-workflow@f177491c77670f150ab4e9b9890254d8eba4164b
-        with:
-          feed_list: ${{ vars.BLOG_FEED_URL || 'https://cmduyeen.github.io/index.xml' }}
-          max_post_count: 5
-          date_format: 'yyyy-mm-dd'
-          template: '- $date: [$title]($url)$newline'
-          tag_post_pre_newline: true
-          skip_commit: true
-          enable_keepalive: false
-
-      - name: Update project list
-        if: github.event_name != 'repository_dispatch' || github.event.action != 'blog_published'
-        uses: actions/github-script@v7
-        with:
-          script: |
-            const fs = require('fs');
-            const owner = context.repo.owner;
-            const repos = await github.paginate(github.rest.repos.listForUser, {
-              username: owner,
-              type: 'public',
-              per_page: 100
-            });
-            let readme = fs.readFileSync('README.md', 'utf8');
-
-            const replaceSection = (content, marker, value) => {
-              const regex = new RegExp(`(<!-- ${marker}:START -->)[\\s\\S]*?(<!-- ${marker}:END -->)`);
-              if (!regex.test(content)) {
-                throw new Error(`README is missing markers for ${marker}`);
-              }
-              return content.replace(regex, (_match, start, end) => `${start}\n${value}\n${end}`);
-            };
-
-            const projectsByYear = new Map();
-            for (const repo of repos) {
-              if (repo.private || repo.name.toLowerCase() === context.repo.repo.toLowerCase()) continue;
-
-              const year = new Date(repo.created_at).getUTCFullYear();
-              if (!projectsByYear.has(year)) projectsByYear.set(year, []);
-              projectsByYear.get(year).push(repo);
-            }
-
-            const generatedProjects = [...projectsByYear.entries()]
-              .sort(([yearA], [yearB]) => yearA - yearB)
-              .map(([year, yearRepos]) => {
-                const numberedRepos = yearRepos
-                  .sort((a, b) => a.name.localeCompare(b.name, 'en', { sensitivity: 'base' }))
-                  .map((repo, index) => `${index + 1}. [${repo.name}](${repo.html_url})`)
-                  .join('\n');
-                return `### ${year}\n${numberedRepos}`;
-              })
-              .join('\n\n') || '*No projects yet.*';
-
-            readme = replaceSection(readme, 'MY-STUFF', generatedProjects);
-            fs.writeFileSync('README.md', readme);
+      - name: Update README and productivity charts
+        env:
+          BLOG_FEED_URL: ${{ vars.BLOG_FEED_URL || 'https://cmduyeen.github.io/index.xml' }}
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python3 .github/scripts/update_profile.py
 
       - name: Commit README changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add README.md
+          git add assets/productivity.svg assets/repo-blog-trend.svg
           if ! git diff --cached --quiet; then
             git commit -m "chore: update profile README [skip ci]"
             git push
