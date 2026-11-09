@@ -9,7 +9,7 @@ import update_profile
 
 
 class UpdateProfileTests(unittest.TestCase):
-    def test_projects_are_grouped_by_year_month_and_numbered_within_month(self):
+    def test_projects_use_compact_year_month_codes_and_month_scoped_numbers(self):
         repositories = [
             {"name": "older", "created_at": "2025-01-01T00:00:00Z", "html_url": "https://example.com/older"},
             {"name": "newest-november", "created_at": "2026-11-09T00:00:00Z", "html_url": "https://example.com/newest-november"},
@@ -23,15 +23,10 @@ class UpdateProfileTests(unittest.TestCase):
 
         self.assertEqual(
             result,
-            "### 2026\n"
-            "#### Nov\n"
-            "`T11-1` -> [newest-november](https://example.com/newest-november)\n"
-            "`T11-2` -> [older-november](https://example.com/older-november)\n\n"
-            "#### Feb\n"
-            "`T02-1` -> [middle](https://example.com/middle)\n\n"
-            "### 2025\n"
-            "#### Jan\n"
-            "`T01-1` -> [older](https://example.com/older)",
+            "2026NOV-1 [newest-november](https://example.com/newest-november)\n"
+            "NOV-2 [older-november](https://example.com/older-november)\n"
+            "FEB-1 [middle](https://example.com/middle)\n\n"
+            "2025JAN-1 [older](https://example.com/older)",
         )
 
     def test_month_range_contains_twelve_months_in_order(self):
