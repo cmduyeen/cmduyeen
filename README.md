@@ -7,26 +7,25 @@ I [read](https://z-library.sk/profile/45325055/0f1fbf), [code](https://github.co
 # My stuff
 
 <!-- MY-STUFF:START -->
-2026NOV-1 [chinese-lunar-calendar](https://github.com/cmduyeen/chinese-lunar-calendar)
-NOV-2 [pinkie-products](https://github.com/cmduyeen/pinkie-products)
-NOV-3 [pinkie-smart-toc](https://github.com/cmduyeen/pinkie-smart-toc)
-NOV-4 [pinkie-sumatrapdf](https://github.com/cmduyeen/pinkie-sumatrapdf)
-NOV-5 [pinkie-terminal](https://github.com/cmduyeen/pinkie-terminal)
-NOV-6 [pinkie-obsidian](https://github.com/cmduyeen/pinkie-obsidian)
-NOV-7 [pinkie-vscode-icons](https://github.com/cmduyeen/pinkie-vscode-icons)
-NOV-8 [pinkie-vscode](https://github.com/cmduyeen/pinkie-vscode)
-NOV-9 [pinkie-chrome](https://github.com/cmduyeen/pinkie-chrome)
-NOV-10 [pinkie-theme](https://github.com/cmduyeen/pinkie-theme)
-OCT-1 [self-study](https://github.com/cmduyeen/self-study)
-OCT-2 [books](https://github.com/cmduyeen/books)
-OCT-3 [cmduyeen.github.io](https://github.com/cmduyeen/cmduyeen.github.io)
-JUL-1 [pinkie-extension-styler](https://github.com/cmduyeen/pinkie-extension-styler)
-APR-1 [lich-am-viet-nam](https://github.com/cmduyeen/lich-am-viet-nam)
-MAR-1 [python-file-organizer-robot](https://github.com/cmduyeen/python-file-organizer-robot)
+## 2026
 
-2025JUN-1 [Focus-Assistant-Extension](https://github.com/cmduyeen/Focus-Assistant-Extension)
-JUN-2 [Pomodoro-Timer-PowerShell](https://github.com/cmduyeen/Pomodoro-Timer-PowerShell)
-APR-1 [CleanWindowsCMD-Free-Safe](https://github.com/cmduyeen/CleanWindowsCMD-Free-Safe)
+<table>
+<tr><td><code>NOV-1</code> <a href="https://github.com/cmduyeen/chinese-lunar-calendar">chinese-lunar-calendar</a></td><td><code>NOV-2</code> <a href="https://github.com/cmduyeen/pinkie-products">pinkie-products</a></td></tr>
+<tr><td><code>NOV-3</code> <a href="https://github.com/cmduyeen/pinkie-smart-toc">pinkie-smart-toc</a></td><td><code>NOV-4</code> <a href="https://github.com/cmduyeen/pinkie-sumatrapdf">pinkie-sumatrapdf</a></td></tr>
+<tr><td><code>NOV-5</code> <a href="https://github.com/cmduyeen/pinkie-terminal">pinkie-terminal</a></td><td><code>NOV-6</code> <a href="https://github.com/cmduyeen/pinkie-obsidian">pinkie-obsidian</a></td></tr>
+<tr><td><code>NOV-7</code> <a href="https://github.com/cmduyeen/pinkie-vscode-icons">pinkie-vscode-icons</a></td><td><code>NOV-8</code> <a href="https://github.com/cmduyeen/pinkie-vscode">pinkie-vscode</a></td></tr>
+<tr><td><code>NOV-9</code> <a href="https://github.com/cmduyeen/pinkie-chrome">pinkie-chrome</a></td><td><code>NOV-10</code> <a href="https://github.com/cmduyeen/pinkie-theme">pinkie-theme</a></td></tr>
+<tr><td><code>OCT-1</code> <a href="https://github.com/cmduyeen/self-study">self-study</a></td><td><code>OCT-2</code> <a href="https://github.com/cmduyeen/books">books</a></td></tr>
+<tr><td><code>OCT-3</code> <a href="https://github.com/cmduyeen/cmduyeen.github.io">cmduyeen.github.io</a></td><td><code>JUL-1</code> <a href="https://github.com/cmduyeen/pinkie-extension-styler">pinkie-extension-styler</a></td></tr>
+<tr><td><code>APR-1</code> <a href="https://github.com/cmduyeen/lich-am-viet-nam">lich-am-viet-nam</a></td><td><code>MAR-1</code> <a href="https://github.com/cmduyeen/python-file-organizer-robot">python-file-organizer-robot</a></td></tr>
+</table>
+
+## 2025
+
+<table>
+<tr><td><code>JUN-1</code> <a href="https://github.com/cmduyeen/Focus-Assistant-Extension">Focus-Assistant-Extension</a></td><td><code>JUN-2</code> <a href="https://github.com/cmduyeen/Pomodoro-Timer-PowerShell">Pomodoro-Timer-PowerShell</a></td></tr>
+<tr><td><code>APR-1</code> <a href="https://github.com/cmduyeen/CleanWindowsCMD-Free-Safe">CleanWindowsCMD-Free-Safe</a></td><td></td></tr>
+</table>
 <!-- MY-STUFF:END -->
 
 # Blog

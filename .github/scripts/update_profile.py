@@ -146,17 +146,21 @@ def render_projects(repositories, profile_repo):
     sections = []
     for year in sorted(grouped, reverse=True):
         entries = []
-        first_entry = True
         for month in sorted(grouped[year], reverse=True):
             month_name = calendar.month_abbr[month].upper()
             for index, repository in enumerate(grouped[year][month], start=1):
-                year_prefix = str(year) if first_entry else ""
+                name = html.escape(repository["name"])
+                url = html.escape(repository["html_url"], quote=True)
                 entries.append(
-                    f"{year_prefix}{month_name}-{index} "
-                    f"[{repository['name']}]({repository['html_url']})"
+                    f"<td><code>{month_name}-{index}</code> "
+                    f'<a href="{url}">{name}</a></td>'
                 )
-                first_entry = False
-        sections.append("\n".join(entries))
+        rows = []
+        for index in range(0, len(entries), 2):
+            left = entries[index]
+            right = entries[index + 1] if index + 1 < len(entries) else "<td></td>"
+            rows.append(f"<tr>{left}{right}</tr>")
+        sections.append(f"## {year}\n\n<table>\n" + "\n".join(rows) + "\n</table>")
     return "\n\n".join(sections) or "*No projects yet.*"
 
 
