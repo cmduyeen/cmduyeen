@@ -66,14 +66,25 @@ jobs:
               return content.replace(regex, (_match, start, end) => `${start}\n${value}\n${end}`);
             };
 
-            const generatedProjects = repos
-              .filter((repo) =>
-                !repo.private &&
-                repo.name.toLowerCase() !== context.repo.repo.toLowerCase()
-              )
-              .sort((a, b) => a.name.localeCompare(b.name, 'en', { sensitivity: 'base' }))
-              .map((repo) => `- [${repo.name}](${repo.html_url})`)
-              .join('\n') || '*No projects yet.*';
+            const projectsByYear = new Map();
+            for (const repo of repos) {
+              if (repo.private || repo.name.toLowerCase() === context.repo.repo.toLowerCase()) continue;
+
+              const year = new Date(repo.created_at).getUTCFullYear();
+              if (!projectsByYear.has(year)) projectsByYear.set(year, []);
+              projectsByYear.get(year).push(repo);
+            }
+
+            const generatedProjects = [...projectsByYear.entries()]
+              .sort(([yearA], [yearB]) => yearA - yearB)
+              .map(([year, yearRepos]) => {
+                const numberedRepos = yearRepos
+                  .sort((a, b) => a.name.localeCompare(b.name, 'en', { sensitivity: 'base' }))
+                  .map((repo, index) => `${index + 1}. [${repo.name}](${repo.html_url})`)
+                  .join('\n');
+                return `### ${year}\n${numberedRepos}`;
+              })
+              .join('\n\n') || '*No projects yet.*';
 
             readme = replaceSection(readme, 'MY-STUFF', generatedProjects);
             fs.writeFileSync('README.md', readme);
