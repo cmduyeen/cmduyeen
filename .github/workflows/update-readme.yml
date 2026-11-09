@@ -5,6 +5,10 @@ on:
   # thay vì chạy hàng ngày gây lãng phí runner minutes của GitHub Actions.
   schedule:
     - cron: '17 17 * * 0'
+  # Cập nhật ngay khi logic workflow thay đổi; README output không kích hoạt lại workflow.
+  push:
+    paths:
+      - '.github/workflows/update-readme.yml'
   # Kích hoạt hướng sự kiện (Event-driven): Nhận webhook dispatch từ blog khi publish bài viết mới
   repository_dispatch:
     types: [blog_published, sync_profile]
@@ -29,6 +33,7 @@ jobs:
           fetch-depth: 1
 
       - name: Update blog posts
+        if: github.event_name != 'repository_dispatch' || github.event.action == 'blog_published'
         uses: gautamkrishnar/blog-post-workflow@f177491c77670f150ab4e9b9890254d8eba4164b
         with:
           feed_list: ${{ vars.BLOG_FEED_URL || 'https://cmduyeen.github.io/index.xml' }}
@@ -40,6 +45,7 @@ jobs:
           enable_keepalive: false
 
       - name: Update project list
+        if: github.event_name != 'repository_dispatch' || github.event.action != 'blog_published'
         uses: actions/github-script@v7
         with:
           script: |
@@ -47,7 +53,7 @@ jobs:
             const owner = context.repo.owner;
             const repos = await github.paginate(github.rest.repos.listForUser, {
               username: owner,
-              type: 'owner',
+              type: 'public',
               per_page: 100
             });
             let readme = fs.readFileSync('README.md', 'utf8');
@@ -60,30 +66,13 @@ jobs:
               return content.replace(regex, (_match, start, end) => `${start}\n${value}\n${end}`);
             };
 
-            const matchingRepos = [];
-            for (const repo of repos) {
-              if (
-                repo.name.toLowerCase() === context.repo.repo.toLowerCase() ||
-                repo.private ||
-                repo.archived ||
-                repo.fork
-              ) {
-                continue;
-              }
-
-              const topics = repo.topics || [];
-              const types = topics.filter((topic) => topic.startsWith('type-') && topic.length > 5);
-              if (types.length > 1) {
-                throw new Error(`${repo.full_name} has multiple type- topics; keep exactly one primary software type.`);
-              }
-              const categories = topics.filter((topic) => topic.startsWith('category-') && topic.length > 9);
-              if (types.length === 0 && categories.length === 0) continue;
-              matchingRepos.push(repo);
-            }
-
-            const generatedProjects = matchingRepos
+            const generatedProjects = repos
+              .filter((repo) =>
+                !repo.private &&
+                repo.name.toLowerCase() !== context.repo.repo.toLowerCase()
+              )
               .sort((a, b) => a.name.localeCompare(b.name, 'en', { sensitivity: 'base' }))
-              .map((repo, index) => `${index + 1}. [${repo.name}](${repo.html_url})`)
+              .map((repo) => `- [${repo.name}](${repo.html_url})`)
               .join('\n') || '*No projects yet.*';
 
             readme = replaceSection(readme, 'MY-STUFF', generatedProjects);
