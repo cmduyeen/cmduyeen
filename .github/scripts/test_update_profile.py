@@ -49,6 +49,18 @@ class UpdateProfileTests(unittest.TestCase):
 
         self.assertEqual(context, ("cmduyeen", "cmduyeen"))
 
+    def test_blog_publish_event_can_skip_expensive_commit_refresh(self):
+        self.assertFalse(update_profile.should_update_commit_chart({
+            "UPDATE_COMMIT_CHART": "false",
+        }))
+        self.assertTrue(update_profile.should_update_commit_chart({
+            "UPDATE_COMMIT_CHART": "true",
+        }))
+        with self.assertRaises(ValueError):
+            update_profile.should_update_commit_chart({
+                "UPDATE_COMMIT_CHART": "sometimes",
+            })
+
     def test_rss_entries_are_parsed_and_sorted(self):
         feed = b"""<?xml version="1.0"?>
         <rss><channel>
@@ -63,6 +75,43 @@ class UpdateProfileTests(unittest.TestCase):
             posts = update_profile.fetch_blog_posts("https://example.com/index.xml")
 
         self.assertEqual([post["title"] for post in posts], ["Newer", "Older"])
+        rendered = update_profile.render_blog_posts(posts)
+        self.assertIn('<a href="https://example.com/newer">Newer</a>', rendered)
+
+    def test_blog_post_output_escapes_untrusted_html(self):
+        post = {
+            "title": '<img src=x onerror="alert(1)">',
+            "url": "https://example.com/post?x=1&y=2",
+            "date": datetime(2026, 11, 3, tzinfo=timezone.utc),
+        }
+
+        rendered = update_profile.render_blog_posts([post])
+
+        self.assertNotIn("<img", rendered)
+        self.assertIn("&lt;img", rendered)
+        self.assertIn("x=1&amp;y=2", rendered)
+
+    def test_blog_post_links_must_be_https(self):
+        post = {
+            "title": "Unsafe link",
+            "url": "javascript:alert(1)",
+            "date": datetime(2026, 11, 3, tzinfo=timezone.utc),
+        }
+
+        with self.assertRaises(ValueError):
+            update_profile.render_blog_posts([post])
+
+    def test_github_api_rejects_non_github_origins(self):
+        with self.assertRaises(ValueError):
+            update_profile.get_json("https://example.com/repos", "not-a-real-token")
+
+    def test_github_api_redirects_are_rejected(self):
+        handler = update_profile.RejectRedirectHandler()
+        request = update_profile.urllib.request.Request("https://api.github.com/repos")
+
+        self.assertIsNone(handler.redirect_request(
+            request, None, 302, "Found", {}, "https://example.com/steal-token"
+        ))
 
     def test_generated_charts_have_accessible_titles_and_twelve_ticks(self):
         months = update_profile.month_range(datetime(2026, 11, 9, tzinfo=timezone.utc))

@@ -44,9 +44,9 @@ I [read](https://z-library.sk/profile/45325055/0f1fbf), [code](https://github.co
 # Blog
 
 <!-- BLOG-POST-LIST:START -->
-- 2026-10-16: [Từ Obsidian đến GitHub Pages, Phần 3: Kiểm tra RSS và đồng bộ hồ sơ](https://cmduyeen.github.io/posts/obsidian-to-github-blog-03-test-rss-and-profile-sync/)
-- 2026-10-15: [Từ Obsidian đến GitHub Pages, Phần 2: Xuất bản Markdown bằng Hugo](https://cmduyeen.github.io/posts/obsidian-to-github-blog-02-publish-with-hugo/)
-- 2026-10-14: [Từ Obsidian đến GitHub Pages, Phần 1: Tạo vault sẵn sàng xuất bản](https://cmduyeen.github.io/posts/obsidian-to-github-blog-01-publishable-vault/)
+- 2026-10-16: <a href="https://cmduyeen.github.io/posts/obsidian-to-github-blog-03-test-rss-and-profile-sync/">Từ Obsidian đến GitHub Pages, Phần 3: Kiểm tra RSS và đồng bộ hồ sơ</a>
+- 2026-10-15: <a href="https://cmduyeen.github.io/posts/obsidian-to-github-blog-02-publish-with-hugo/">Từ Obsidian đến GitHub Pages, Phần 2: Xuất bản Markdown bằng Hugo</a>
+- 2026-10-14: <a href="https://cmduyeen.github.io/posts/obsidian-to-github-blog-01-publishable-vault/">Từ Obsidian đến GitHub Pages, Phần 1: Tạo vault sẵn sàng xuất bản</a>
 <!-- BLOG-POST-LIST:END -->
 
 # Productivity

@@ -15,6 +15,12 @@ from pathlib import Path
 API_ROOT = "https://api.github.com"
 MONTH_COUNT = 12
 PAGE_SIZE = 100
+MAX_FEED_BYTES = 2 * 1024 * 1024
+
+
+class RejectRedirectHandler(urllib.request.HTTPRedirectHandler):
+    def redirect_request(self, request, response, code, message, headers, new_url):
+        return None
 
 
 def parse_datetime(value):
@@ -42,7 +48,8 @@ def get_json(url, token):
 
     request = urllib.request.Request(url, headers=headers)
     try:
-        with urllib.request.urlopen(request, timeout=30) as response:
+        opener = urllib.request.build_opener(RejectRedirectHandler)
+        with opener.open(request, timeout=30) as response:
             return json.loads(response.read())
     except urllib.error.HTTPError as error:
         details = error.read().decode("utf-8", errors="replace")[:500]
@@ -85,7 +92,10 @@ def fetch_blog_posts(feed_url):
     )
     try:
         with urllib.request.urlopen(request, timeout=30) as response:
-            root = ET.fromstring(response.read())
+            feed_content = response.read(MAX_FEED_BYTES + 1)
+            if len(feed_content) > MAX_FEED_BYTES:
+                raise RuntimeError("Blog feed exceeds the 2 MiB size limit.")
+            root = ET.fromstring(feed_content)
     except (urllib.error.URLError, ET.ParseError) as error:
         raise RuntimeError(f"Unable to read blog feed: {error}") from error
 
@@ -111,9 +121,17 @@ def fetch_blog_posts(feed_url):
         )
         if not title or not link or not published:
             raise RuntimeError(f"Blog feed entry {index} is missing a title, link, or publication date.")
+        link = validate_https_url(link, f"Blog feed entry {index} link")
         posts.append({"title": title, "url": link, "date": parse_datetime(published)})
 
     return sorted(posts, key=lambda post: post["date"], reverse=True)
+
+
+def validate_https_url(url, field):
+    parsed = urllib.parse.urlparse(url)
+    if parsed.scheme != "https" or not parsed.hostname or parsed.username or parsed.password:
+        raise ValueError(f"{field} must be an HTTPS URL without embedded credentials.")
+    return url
 
 
 def month_range(now):
@@ -167,7 +185,9 @@ def render_projects(repositories, profile_repo):
 
 def render_blog_posts(posts, limit=5):
     return "\n".join(
-        f"- {post['date'].date().isoformat()}: [{post['title']}]({post['url']})"
+        f"- {post['date'].date().isoformat()}: "
+        f'<a href="{html.escape(validate_https_url(post["url"], "Blog post URL"), quote=True)}">'
+        f"{html.escape(post['title'])}</a>"
         for post in posts[:limit]
     ) or "*No blog posts yet.*"
 
@@ -331,6 +351,13 @@ def workflow_context(environment):
     return owner, profile_repo
 
 
+def should_update_commit_chart(environment):
+    value = environment.get("UPDATE_COMMIT_CHART", "true").lower()
+    if value not in {"true", "false"}:
+        raise ValueError("UPDATE_COMMIT_CHART must be either true or false.")
+    return value == "true"
+
+
 def run():
     owner, profile_repo = workflow_context(os.environ)
     token = os.environ.get("GITHUB_TOKEN")
@@ -346,7 +373,11 @@ def run():
         if repository.get("name", "").casefold() != profile_repo.casefold()
     ]
     posts = fetch_blog_posts(feed_url)
-    commit_counts = fetch_commit_counts(visible_repositories, owner, profile_repo, token, months, now)
+    update_commit_chart = should_update_commit_chart(os.environ)
+    if update_commit_chart:
+        commit_counts = fetch_commit_counts(visible_repositories, owner, profile_repo, token, months, now)
+    elif not Path("assets/productivity.svg").is_file():
+        raise RuntimeError("Cannot skip commit chart refresh because assets/productivity.svg is missing.")
 
     repo_counts = Counter()
     for repository in visible_repositories:
@@ -370,15 +401,17 @@ def run():
 
     assets = Path("assets")
     assets.mkdir(exist_ok=True)
-    (assets / "productivity.svg").write_text(
-        render_productivity_svg(months, commit_counts, owner), encoding="utf-8", newline="\n"
-    )
+    if update_commit_chart:
+        (assets / "productivity.svg").write_text(
+            render_productivity_svg(months, commit_counts, owner), encoding="utf-8", newline="\n"
+        )
     (assets / "repo-blog-trend.svg").write_text(
         render_trend_svg(months, repo_counts, blog_counts), encoding="utf-8", newline="\n"
     )
     print(
-        f"Updated {len(visible_repositories)} public repositories, "
-        f"{len(posts)} RSS posts, and 12 months of charts."
+        f"Updated {len(visible_repositories)} public repositories and "
+        f"{len(posts)} RSS posts; "
+        f"{'refreshed' if update_commit_chart else 'retained'} the commit chart."
     )
 
 

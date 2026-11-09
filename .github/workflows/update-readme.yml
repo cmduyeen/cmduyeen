@@ -27,6 +27,7 @@ permissions:
 jobs:
   update-readme:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
@@ -37,6 +38,7 @@ jobs:
         env:
           BLOG_FEED_URL: ${{ vars.BLOG_FEED_URL || 'https://cmduyeen.github.io/index.xml' }}
           GITHUB_TOKEN: ${{ github.token }}
+          UPDATE_COMMIT_CHART: ${{ github.event_name != 'repository_dispatch' || github.event.action != 'blog_published' }}
         run: python3 .github/scripts/update_profile.py
 
       - name: Commit README changes
