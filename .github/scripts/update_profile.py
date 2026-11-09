@@ -141,26 +141,27 @@ def render_projects(repositories, profile_repo):
     grouped = {}
     for repository in visible:
         created = parse_datetime(repository["created_at"])
-        grouped.setdefault(created.year, {}).setdefault(created.month, []).append(repository)
+        grouped.setdefault(created.year, []).append((created, repository))
 
     sections = []
     for year in sorted(grouped, reverse=True):
         entries = []
-        for month in sorted(grouped[year], reverse=True):
-            month_name = calendar.month_abbr[month].upper()
-            for index, repository in enumerate(grouped[year][month], start=1):
-                name = html.escape(repository["name"])
-                url = html.escape(repository["html_url"], quote=True)
-                entries.append(
-                    f"<td><code>{month_name}-{index}</code> "
-                    f'<a href="{url}">{name}</a></td>'
-                )
-        rows = []
-        for index in range(0, len(entries), 2):
-            left = entries[index]
-            right = entries[index + 1] if index + 1 < len(entries) else "<td></td>"
-            rows.append(f"<tr>{left}{right}</tr>")
-        sections.append(f"## {year}\n\n<table>\n" + "\n".join(rows) + "\n</table>")
+        for created, repository in sorted(
+            grouped[year],
+            key=lambda item: (-item[0].timestamp(), item[1]["name"].casefold()),
+        ):
+            created_label = f"{calendar.month_abbr[created.month].upper()}-{created.day:02d}"
+            name = html.escape(repository["name"])
+            url = html.escape(repository["html_url"], quote=True)
+            entries.append(
+                f"<li><code>{created_label}</code> -&gt; "
+                f'<a href="{url}">{name}</a></li>'
+            )
+        details = (
+            f"<details>\n<summary>{year}-{len(grouped[year])}R</summary>\n\n"
+            "<ol>\n" + "\n".join(entries) + "\n</ol>\n</details>"
+        )
+        sections.append(details)
     return "\n\n".join(sections) or "*No projects yet.*"
 
 
@@ -361,10 +362,7 @@ def run():
     readme = replace_section(readme, "MY-STUFF", render_projects(repositories, profile_repo))
     readme = replace_section(readme, "BLOG-POST-LIST", render_blog_posts(posts))
     productivity_section = (
-        "Commit counts include commits GitHub attributes to @"
-        f"{owner} on default branches of public repositories. The trend chart shows new repositories and "
-        "blog posts per month from the public repository list and RSS feed."
-        "\n\n![Public commits by month](assets/productivity.svg)"
+        "![Public commits by month](assets/productivity.svg)"
         "\n\n![New repositories and blog posts per month](assets/repo-blog-trend.svg)"
     )
     readme = replace_section(readme, "PRODUCTIVITY", productivity_section)

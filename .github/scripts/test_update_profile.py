@@ -9,7 +9,7 @@ import update_profile
 
 
 class UpdateProfileTests(unittest.TestCase):
-    def test_projects_use_year_headings_two_columns_and_month_scoped_codes(self):
+    def test_projects_use_collapsible_year_totals_and_month_day_ordered_lists(self):
         repositories = [
             {"name": "older", "created_at": "2025-01-01T00:00:00Z", "html_url": "https://example.com/older"},
             {"name": "newest-november", "created_at": "2026-11-09T00:00:00Z", "html_url": "https://example.com/newest-november"},
@@ -23,16 +23,16 @@ class UpdateProfileTests(unittest.TestCase):
 
         self.assertEqual(
             result,
-            "## 2026\n\n"
-            "<table>\n"
-            '<tr><td><code>NOV-1</code> <a href="https://example.com/newest-november">newest-november</a></td>'
-            '<td><code>NOV-2</code> <a href="https://example.com/older-november">older-november</a></td></tr>\n'
-            '<tr><td><code>FEB-1</code> <a href="https://example.com/middle">middle</a></td><td></td></tr>\n'
-            "</table>\n\n"
-            "## 2025\n\n"
-            "<table>\n"
-            '<tr><td><code>JAN-1</code> <a href="https://example.com/older">older</a></td><td></td></tr>\n'
-            "</table>",
+            "<details>\n<summary>2026-3R</summary>\n\n"
+            "<ol>\n"
+            '<li><code>NOV-09</code> -&gt; <a href="https://example.com/newest-november">newest-november</a></li>\n'
+            '<li><code>NOV-01</code> -&gt; <a href="https://example.com/older-november">older-november</a></li>\n'
+            '<li><code>FEB-01</code> -&gt; <a href="https://example.com/middle">middle</a></li>\n'
+            "</ol>\n</details>\n\n"
+            "<details>\n<summary>2025-1R</summary>\n\n"
+            "<ol>\n"
+            '<li><code>JAN-01</code> -&gt; <a href="https://example.com/older">older</a></li>\n'
+            "</ol>\n</details>",
         )
 
     def test_month_range_contains_twelve_months_in_order(self):

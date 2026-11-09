@@ -7,25 +7,38 @@ I [read](https://z-library.sk/profile/45325055/0f1fbf), [code](https://github.co
 # My stuff
 
 <!-- MY-STUFF:START -->
-## 2026
+<details>
+<summary>2026-16R</summary>
 
-<table>
-<tr><td><code>NOV-1</code> <a href="https://github.com/cmduyeen/chinese-lunar-calendar">chinese-lunar-calendar</a></td><td><code>NOV-2</code> <a href="https://github.com/cmduyeen/pinkie-products">pinkie-products</a></td></tr>
-<tr><td><code>NOV-3</code> <a href="https://github.com/cmduyeen/pinkie-smart-toc">pinkie-smart-toc</a></td><td><code>NOV-4</code> <a href="https://github.com/cmduyeen/pinkie-sumatrapdf">pinkie-sumatrapdf</a></td></tr>
-<tr><td><code>NOV-5</code> <a href="https://github.com/cmduyeen/pinkie-terminal">pinkie-terminal</a></td><td><code>NOV-6</code> <a href="https://github.com/cmduyeen/pinkie-obsidian">pinkie-obsidian</a></td></tr>
-<tr><td><code>NOV-7</code> <a href="https://github.com/cmduyeen/pinkie-vscode-icons">pinkie-vscode-icons</a></td><td><code>NOV-8</code> <a href="https://github.com/cmduyeen/pinkie-vscode">pinkie-vscode</a></td></tr>
-<tr><td><code>NOV-9</code> <a href="https://github.com/cmduyeen/pinkie-chrome">pinkie-chrome</a></td><td><code>NOV-10</code> <a href="https://github.com/cmduyeen/pinkie-theme">pinkie-theme</a></td></tr>
-<tr><td><code>OCT-1</code> <a href="https://github.com/cmduyeen/self-study">self-study</a></td><td><code>OCT-2</code> <a href="https://github.com/cmduyeen/books">books</a></td></tr>
-<tr><td><code>OCT-3</code> <a href="https://github.com/cmduyeen/cmduyeen.github.io">cmduyeen.github.io</a></td><td><code>JUL-1</code> <a href="https://github.com/cmduyeen/pinkie-extension-styler">pinkie-extension-styler</a></td></tr>
-<tr><td><code>APR-1</code> <a href="https://github.com/cmduyeen/lich-am-viet-nam">lich-am-viet-nam</a></td><td><code>MAR-1</code> <a href="https://github.com/cmduyeen/python-file-organizer-robot">python-file-organizer-robot</a></td></tr>
-</table>
+<ol>
+<li><code>NOV-08</code> -&gt; <a href="https://github.com/cmduyeen/chinese-lunar-calendar">chinese-lunar-calendar</a></li>
+<li><code>NOV-08</code> -&gt; <a href="https://github.com/cmduyeen/pinkie-products">pinkie-products</a></li>
+<li><code>NOV-08</code> -&gt; <a href="https://github.com/cmduyeen/pinkie-smart-toc">pinkie-smart-toc</a></li>
+<li><code>NOV-08</code> -&gt; <a href="https://github.com/cmduyeen/pinkie-sumatrapdf">pinkie-sumatrapdf</a></li>
+<li><code>NOV-08</code> -&gt; <a href="https://github.com/cmduyeen/pinkie-terminal">pinkie-terminal</a></li>
+<li><code>NOV-08</code> -&gt; <a href="https://github.com/cmduyeen/pinkie-obsidian">pinkie-obsidian</a></li>
+<li><code>NOV-08</code> -&gt; <a href="https://github.com/cmduyeen/pinkie-vscode-icons">pinkie-vscode-icons</a></li>
+<li><code>NOV-08</code> -&gt; <a href="https://github.com/cmduyeen/pinkie-vscode">pinkie-vscode</a></li>
+<li><code>NOV-08</code> -&gt; <a href="https://github.com/cmduyeen/pinkie-chrome">pinkie-chrome</a></li>
+<li><code>NOV-08</code> -&gt; <a href="https://github.com/cmduyeen/pinkie-theme">pinkie-theme</a></li>
+<li><code>OCT-21</code> -&gt; <a href="https://github.com/cmduyeen/self-study">self-study</a></li>
+<li><code>OCT-21</code> -&gt; <a href="https://github.com/cmduyeen/books">books</a></li>
+<li><code>OCT-16</code> -&gt; <a href="https://github.com/cmduyeen/cmduyeen.github.io">cmduyeen.github.io</a></li>
+<li><code>JUL-20</code> -&gt; <a href="https://github.com/cmduyeen/pinkie-extension-styler">pinkie-extension-styler</a></li>
+<li><code>APR-23</code> -&gt; <a href="https://github.com/cmduyeen/lich-am-viet-nam">lich-am-viet-nam</a></li>
+<li><code>MAR-25</code> -&gt; <a href="https://github.com/cmduyeen/python-file-organizer-robot">python-file-organizer-robot</a></li>
+</ol>
+</details>
 
-## 2025
+<details>
+<summary>2025-3R</summary>
 
-<table>
-<tr><td><code>JUN-1</code> <a href="https://github.com/cmduyeen/Focus-Assistant-Extension">Focus-Assistant-Extension</a></td><td><code>JUN-2</code> <a href="https://github.com/cmduyeen/Pomodoro-Timer-PowerShell">Pomodoro-Timer-PowerShell</a></td></tr>
-<tr><td><code>APR-1</code> <a href="https://github.com/cmduyeen/CleanWindowsCMD-Free-Safe">CleanWindowsCMD-Free-Safe</a></td><td></td></tr>
-</table>
+<ol>
+<li><code>JUN-10</code> -&gt; <a href="https://github.com/cmduyeen/Focus-Assistant-Extension">Focus-Assistant-Extension</a></li>
+<li><code>JUN-04</code> -&gt; <a href="https://github.com/cmduyeen/Pomodoro-Timer-PowerShell">Pomodoro-Timer-PowerShell</a></li>
+<li><code>APR-10</code> -&gt; <a href="https://github.com/cmduyeen/CleanWindowsCMD-Free-Safe">CleanWindowsCMD-Free-Safe</a></li>
+</ol>
+</details>
 <!-- MY-STUFF:END -->
 
 # Blog
@@ -39,8 +52,6 @@ I [read](https://z-library.sk/profile/45325055/0f1fbf), [code](https://github.co
 # Productivity
 
 <!-- PRODUCTIVITY:START -->
-Commit counts include commits GitHub attributes to @cmduyeen on default branches of public repositories. The trend chart shows new repositories and blog posts per month from the public repository list and RSS feed.
-
 ![Public commits by month](assets/productivity.svg)
 
 ![New repositories and blog posts per month](assets/repo-blog-trend.svg)
