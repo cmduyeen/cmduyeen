@@ -8,7 +8,7 @@ I [read](https://z-library.sk/profile/45325055/0f1fbf), [code](https://github.co
 
 <!-- MY-STUFF:START -->
 <details>
-<summary>2026-26R</summary>
+<summary>2026-24R</summary>
 
 <ol>
 <li><code>NOV-12</code> -&gt; <a href="https://github.com/cmduyeen/serein-theme">serein-theme</a></li>
@@ -22,8 +22,6 @@ I [read](https://z-library.sk/profile/45325055/0f1fbf), [code](https://github.co
 <li><code>NOV-12</code> -&gt; <a href="https://github.com/cmduyeen/serein-obsidian">serein-obsidian</a></li>
 <li><code>NOV-12</code> -&gt; <a href="https://github.com/cmduyeen/serein-terminal">serein-terminal</a></li>
 <li><code>NOV-08</code> -&gt; <a href="https://github.com/cmduyeen/chinese-lunar-calendar">chinese-lunar-calendar</a></li>
-<li><code>NOV-08</code> -&gt; <a href="https://github.com/cmduyeen/pinkie-products">pinkie-products</a></li>
-<li><code>NOV-08</code> -&gt; <a href="https://github.com/cmduyeen/pinkie-smart-toc">pinkie-smart-toc</a></li>
 <li><code>NOV-08</code> -&gt; <a href="https://github.com/cmduyeen/pinkie-sumatrapdf">pinkie-sumatrapdf</a></li>
 <li><code>NOV-08</code> -&gt; <a href="https://github.com/cmduyeen/pinkie-terminal">pinkie-terminal</a></li>
 <li><code>NOV-08</code> -&gt; <a href="https://github.com/cmduyeen/pinkie-obsidian">pinkie-obsidian</a></li>
