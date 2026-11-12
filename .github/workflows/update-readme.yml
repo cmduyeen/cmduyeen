@@ -1,9 +1,9 @@
 name: Update profile README
 
 on:
-  # Safety net: chạy định kỳ hàng tuần vào Chủ nhật lúc 00:17 ICT (17:17 UTC)
-  # thay vì chạy hàng ngày gây lãng phí runner minutes của GitHub Actions.
+  # Cập nhật danh sách repo/RSS hàng ngày; làm mới biểu đồ commit vào Chủ nhật.
   schedule:
+    - cron: '17 17 * * 1-6'
     - cron: '17 17 * * 0'
   # Cập nhật ngay khi logic workflow thay đổi; README output không kích hoạt lại workflow.
   push:
@@ -38,7 +38,7 @@ jobs:
         env:
           BLOG_FEED_URL: ${{ vars.BLOG_FEED_URL || 'https://cmduyeen.github.io/index.xml' }}
           GITHUB_TOKEN: ${{ github.token }}
-          UPDATE_COMMIT_CHART: ${{ github.event_name != 'repository_dispatch' || github.event.action != 'blog_published' }}
+          UPDATE_COMMIT_CHART: ${{ (github.event_name != 'schedule' || github.event.schedule == '17 17 * * 0') && (github.event_name != 'repository_dispatch' || github.event.action != 'blog_published') }}
         run: python3 .github/scripts/update_profile.py
 
       - name: Commit README changes
