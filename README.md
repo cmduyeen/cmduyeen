@@ -8,9 +8,19 @@ I [read](https://z-library.sk/profile/45325055/0f1fbf), [code](https://github.co
 
 <!-- MY-STUFF:START -->
 <details>
-<summary>2026-16R</summary>
+<summary>2026-26R</summary>
 
 <ol>
+<li><code>NOV-12</code> -&gt; <a href="https://github.com/cmduyeen/serein-theme">serein-theme</a></li>
+<li><code>NOV-12</code> -&gt; <a href="https://github.com/cmduyeen/serein-vimium">serein-vimium</a></li>
+<li><code>NOV-12</code> -&gt; <a href="https://github.com/cmduyeen/serein-telegram">serein-telegram</a></li>
+<li><code>NOV-12</code> -&gt; <a href="https://github.com/cmduyeen/serein-sublime-text">serein-sublime-text</a></li>
+<li><code>NOV-12</code> -&gt; <a href="https://github.com/cmduyeen/serein-windows">serein-windows</a></li>
+<li><code>NOV-12</code> -&gt; <a href="https://github.com/cmduyeen/serein-codex">serein-codex</a></li>
+<li><code>NOV-12</code> -&gt; <a href="https://github.com/cmduyeen/serein-antigravity">serein-antigravity</a></li>
+<li><code>NOV-12</code> -&gt; <a href="https://github.com/cmduyeen/serein-vscode">serein-vscode</a></li>
+<li><code>NOV-12</code> -&gt; <a href="https://github.com/cmduyeen/serein-obsidian">serein-obsidian</a></li>
+<li><code>NOV-12</code> -&gt; <a href="https://github.com/cmduyeen/serein-terminal">serein-terminal</a></li>
 <li><code>NOV-08</code> -&gt; <a href="https://github.com/cmduyeen/chinese-lunar-calendar">chinese-lunar-calendar</a></li>
 <li><code>NOV-08</code> -&gt; <a href="https://github.com/cmduyeen/pinkie-products">pinkie-products</a></li>
 <li><code>NOV-08</code> -&gt; <a href="https://github.com/cmduyeen/pinkie-smart-toc">pinkie-smart-toc</a></li>
@@ -44,6 +54,8 @@ I [read](https://z-library.sk/profile/45325055/0f1fbf), [code](https://github.co
 # Blog
 
 <!-- BLOG-POST-LIST:START -->
+- 2026-11-11: <a href="https://cmduyeen.github.io/posts/test-post/">Test post</a>
+- 2026-11-11: <a href="https://cmduyeen.github.io/posts/test-code/">Test code</a>
 - 2026-10-16: <a href="https://cmduyeen.github.io/posts/obsidian-to-github-blog-03-test-rss-and-profile-sync/">Từ Obsidian đến GitHub Pages, Phần 3: Kiểm tra RSS và đồng bộ hồ sơ</a>
 - 2026-10-15: <a href="https://cmduyeen.github.io/posts/obsidian-to-github-blog-02-publish-with-hugo/">Từ Obsidian đến GitHub Pages, Phần 2: Xuất bản Markdown bằng Hugo</a>
 - 2026-10-14: <a href="https://cmduyeen.github.io/posts/obsidian-to-github-blog-01-publishable-vault/">Từ Obsidian đến GitHub Pages, Phần 1: Tạo vault sẵn sàng xuất bản</a>
