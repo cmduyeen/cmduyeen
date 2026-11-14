@@ -8,9 +8,17 @@ I [read](https://z-library.sk/profile/45325055/0f1fbf), [code](https://github.co
 
 <!-- MY-STUFF:START -->
 <details>
-<summary>2026-24R</summary>
+<summary>2026-31R</summary>
 
 <ol>
+<li><code>NOV-14</code> -&gt; <a href="https://github.com/cmduyeen/malaysia-lunar-calendar">malaysia-lunar-calendar</a></li>
+<li><code>NOV-14</code> -&gt; <a href="https://github.com/cmduyeen/singapore-lunar-calendar">singapore-lunar-calendar</a></li>
+<li><code>NOV-14</code> -&gt; <a href="https://github.com/cmduyeen/korean-lunar-calendar">korean-lunar-calendar</a></li>
+<li><code>NOV-14</code> -&gt; <a href="https://github.com/cmduyeen/macao-lunar-calendar">macao-lunar-calendar</a></li>
+<li><code>NOV-14</code> -&gt; <a href="https://github.com/cmduyeen/hong-kong-lunar-calendar">hong-kong-lunar-calendar</a></li>
+<li><code>NOV-14</code> -&gt; <a href="https://github.com/cmduyeen/taiwan-lunar-calendar">taiwan-lunar-calendar</a></li>
+<li><code>NOV-14</code> -&gt; <a href="https://github.com/cmduyeen/vietnamese-lunar-calendar">vietnamese-lunar-calendar</a></li>
+<li><code>NOV-14</code> -&gt; <a href="https://github.com/cmduyeen/serein-neovim">serein-neovim</a></li>
 <li><code>NOV-12</code> -&gt; <a href="https://github.com/cmduyeen/serein-theme">serein-theme</a></li>
 <li><code>NOV-12</code> -&gt; <a href="https://github.com/cmduyeen/serein-vimium">serein-vimium</a></li>
 <li><code>NOV-12</code> -&gt; <a href="https://github.com/cmduyeen/serein-telegram">serein-telegram</a></li>
@@ -30,7 +38,6 @@ I [read](https://z-library.sk/profile/45325055/0f1fbf), [code](https://github.co
 <li><code>NOV-08</code> -&gt; <a href="https://github.com/cmduyeen/pinkie-chrome">pinkie-chrome</a></li>
 <li><code>NOV-08</code> -&gt; <a href="https://github.com/cmduyeen/pinkie-theme">pinkie-theme</a></li>
 <li><code>OCT-21</code> -&gt; <a href="https://github.com/cmduyeen/self-study">self-study</a></li>
-<li><code>OCT-21</code> -&gt; <a href="https://github.com/cmduyeen/books">books</a></li>
 <li><code>OCT-16</code> -&gt; <a href="https://github.com/cmduyeen/cmduyeen.github.io">cmduyeen.github.io</a></li>
 <li><code>JUL-20</code> -&gt; <a href="https://github.com/cmduyeen/pinkie-extension-styler">pinkie-extension-styler</a></li>
 <li><code>APR-23</code> -&gt; <a href="https://github.com/cmduyeen/lich-am-viet-nam">lich-am-viet-nam</a></li>
@@ -52,11 +59,11 @@ I [read](https://z-library.sk/profile/45325055/0f1fbf), [code](https://github.co
 # Blog
 
 <!-- BLOG-POST-LIST:START -->
+- 2026-11-14: <a href="https://cmduyeen.github.io/posts/toi-uu-khong-gian-ghi-chu-obsidian-second-brain-serein/">Biến Obsidian Thành Không Gian Ghi Chép Second Brain Tĩnh Lặng Với Serein Theme</a>
+- 2026-11-14: <a href="https://cmduyeen.github.io/posts/cau-hinh-neovim-lua-serein-colorscheme-treesitter/">Cấu Hình Serein Colorscheme Cho Neovim Bằng Lazy.nvim, TreeSitter &amp; Lualine</a>
+- 2026-11-14: <a href="https://cmduyeen.github.io/posts/huong-dan-cai-dat-serein-vscode-windows-terminal/">Hướng Dẫn Cài Đặt Không Gian Lập Trình Ấm Áp Với VS Code &amp; Windows Terminal</a>
+- 2026-11-14: <a href="https://cmduyeen.github.io/posts/serein-theme-he-sinh-thai-toi-gian-khong-gian-lam-viec-dong-bo/">Serein Theme: Triết Lý Tối Giản Và Hệ Sinh Thái Không Gian Làm Việc Đồng Bộ</a>
 - 2026-11-11: <a href="https://cmduyeen.github.io/posts/test-post/">Test post</a>
-- 2026-11-11: <a href="https://cmduyeen.github.io/posts/test-code/">Test code</a>
-- 2026-10-16: <a href="https://cmduyeen.github.io/posts/obsidian-to-github-blog-03-test-rss-and-profile-sync/">Từ Obsidian đến GitHub Pages, Phần 3: Kiểm tra RSS và đồng bộ hồ sơ</a>
-- 2026-10-15: <a href="https://cmduyeen.github.io/posts/obsidian-to-github-blog-02-publish-with-hugo/">Từ Obsidian đến GitHub Pages, Phần 2: Xuất bản Markdown bằng Hugo</a>
-- 2026-10-14: <a href="https://cmduyeen.github.io/posts/obsidian-to-github-blog-01-publishable-vault/">Từ Obsidian đến GitHub Pages, Phần 1: Tạo vault sẵn sàng xuất bản</a>
 <!-- BLOG-POST-LIST:END -->
 
 # Productivity
