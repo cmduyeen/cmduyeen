@@ -8,7 +8,7 @@ I [read](https://z-library.sk/profile/45325055/0f1fbf), [code](https://github.co
 
 <!-- MY-STUFF:START -->
 <details>
-<summary>2026-31R</summary>
+<summary>2026-30R</summary>
 
 <ol>
 <li><code>NOV-14</code> -&gt; <a href="https://github.com/cmduyeen/malaysia-lunar-calendar">malaysia-lunar-calendar</a></li>
@@ -17,7 +17,6 @@ I [read](https://z-library.sk/profile/45325055/0f1fbf), [code](https://github.co
 <li><code>NOV-14</code> -&gt; <a href="https://github.com/cmduyeen/macao-lunar-calendar">macao-lunar-calendar</a></li>
 <li><code>NOV-14</code> -&gt; <a href="https://github.com/cmduyeen/hong-kong-lunar-calendar">hong-kong-lunar-calendar</a></li>
 <li><code>NOV-14</code> -&gt; <a href="https://github.com/cmduyeen/taiwan-lunar-calendar">taiwan-lunar-calendar</a></li>
-<li><code>NOV-14</code> -&gt; <a href="https://github.com/cmduyeen/vietnamese-lunar-calendar">vietnamese-lunar-calendar</a></li>
 <li><code>NOV-14</code> -&gt; <a href="https://github.com/cmduyeen/serein-neovim">serein-neovim</a></li>
 <li><code>NOV-12</code> -&gt; <a href="https://github.com/cmduyeen/serein-theme">serein-theme</a></li>
 <li><code>NOV-12</code> -&gt; <a href="https://github.com/cmduyeen/serein-vimium">serein-vimium</a></li>
