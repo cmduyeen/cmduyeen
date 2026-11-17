@@ -62,7 +62,7 @@ I [read](https://z-library.sk/profile/45325055/0f1fbf), [code](https://github.co
 - 2026-11-14: <a href="https://cmduyeen.github.io/posts/cau-hinh-neovim-lua-serein-colorscheme-treesitter/">Cấu Hình Serein Colorscheme Cho Neovim Bằng Lazy.nvim, TreeSitter &amp; Lualine</a>
 - 2026-11-14: <a href="https://cmduyeen.github.io/posts/huong-dan-cai-dat-serein-vscode-windows-terminal/">Hướng Dẫn Cài Đặt Không Gian Lập Trình Ấm Áp Với VS Code &amp; Windows Terminal</a>
 - 2026-11-14: <a href="https://cmduyeen.github.io/posts/serein-theme-he-sinh-thai-toi-gian-khong-gian-lam-viec-dong-bo/">Serein Theme: Triết Lý Tối Giản Và Hệ Sinh Thái Không Gian Làm Việc Đồng Bộ</a>
-- 2026-11-11: <a href="https://cmduyeen.github.io/posts/test-post/">Test post</a>
+- 2026-11-11: <a href="https://cmduyeen.github.io/posts/test-code/">Test code</a>
 <!-- BLOG-POST-LIST:END -->
 
 # Productivity
