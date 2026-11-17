@@ -8,9 +8,11 @@ I [read](https://z-library.sk/profile/45325055/0f1fbf), [code](https://github.co
 
 <!-- MY-STUFF:START -->
 <details>
-<summary>2026-30R</summary>
+<summary>2026-32R</summary>
 
 <ol>
+<li><code>NOV-17</code> -&gt; <a href="https://github.com/cmduyeen/pro-blog-starter-kit">pro-blog-starter-kit</a></li>
+<li><code>NOV-17</code> -&gt; <a href="https://github.com/cmduyeen/pro-github-starter-kit">pro-github-starter-kit</a></li>
 <li><code>NOV-14</code> -&gt; <a href="https://github.com/cmduyeen/malaysia-lunar-calendar">malaysia-lunar-calendar</a></li>
 <li><code>NOV-14</code> -&gt; <a href="https://github.com/cmduyeen/singapore-lunar-calendar">singapore-lunar-calendar</a></li>
 <li><code>NOV-14</code> -&gt; <a href="https://github.com/cmduyeen/korean-lunar-calendar">korean-lunar-calendar</a></li>
@@ -58,11 +60,11 @@ I [read](https://z-library.sk/profile/45325055/0f1fbf), [code](https://github.co
 # Blog
 
 <!-- BLOG-POST-LIST:START -->
-- 2026-11-14: <a href="https://cmduyeen.github.io/posts/toi-uu-khong-gian-ghi-chu-obsidian-second-brain-serein/">Biến Obsidian Thành Không Gian Ghi Chép Second Brain Tĩnh Lặng Với Serein Theme</a>
-- 2026-11-14: <a href="https://cmduyeen.github.io/posts/cau-hinh-neovim-lua-serein-colorscheme-treesitter/">Cấu Hình Serein Colorscheme Cho Neovim Bằng Lazy.nvim, TreeSitter &amp; Lualine</a>
-- 2026-11-14: <a href="https://cmduyeen.github.io/posts/huong-dan-cai-dat-serein-vscode-windows-terminal/">Hướng Dẫn Cài Đặt Không Gian Lập Trình Ấm Áp Với VS Code &amp; Windows Terminal</a>
-- 2026-11-14: <a href="https://cmduyeen.github.io/posts/serein-theme-he-sinh-thai-toi-gian-khong-gian-lam-viec-dong-bo/">Serein Theme: Triết Lý Tối Giản Và Hệ Sinh Thái Không Gian Làm Việc Đồng Bộ</a>
-- 2026-11-11: <a href="https://cmduyeen.github.io/posts/test-code/">Test code</a>
+- 2026-11-17: <a href="https://cmduyeen.github.io/posts/viet-bang-markdown-04-lien-ket-anh/">Cách chèn liên kết và ảnh chuẩn SEO trong Markdown (Markdown 101 - Phần 04)</a>
+- 2026-11-17: <a href="https://cmduyeen.github.io/posts/viet-bang-markdown-03-danh-sach-khoi-ma/">Cách viết danh sách, trích dẫn và khối mã trong Markdown (Markdown 101 - Phần 03)</a>
+- 2026-11-17: <a href="https://cmduyeen.github.io/posts/viet-bang-markdown-02-tieu-de-doan-van/">Cách viết tiêu đề, tách đoạn văn và nhấn mạnh trong Markdown (Markdown 101 - Phần 02)</a>
+- 2026-11-17: <a href="https://cmduyeen.github.io/posts/viet-bang-markdown-06-xuat-ban-hugo/">Cách xem trước và xuất bản bài Markdown lên Hugo GitHub Pages (Markdown 101 - Phần 06)</a>
+- 2026-11-17: <a href="https://cmduyeen.github.io/posts/cai-lich-am-viet-nam-google-calendar-apple-calendar/">Cài Lịch Âm Việt Nam chuẩn GMT+7 lên Google Calendar và Apple Calendar không cần app ngoài</a>
 <!-- BLOG-POST-LIST:END -->
 
 # Productivity
