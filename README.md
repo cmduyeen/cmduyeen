@@ -83,11 +83,11 @@ I [read](https://z-library.sk/profile/45325055/0f1fbf), [code](https://github.co
 ## Latest from the Blog
 
 <!-- BLOG-POST-LIST:START -->
-- 2026-11-17: <a href="https://cmduyeen.github.io/posts/viet-bang-markdown-04-lien-ket-anh/">Cách chèn liên kết và ảnh chuẩn SEO trong Markdown (Markdown 101 - Phần 04)</a>
-- 2026-11-17: <a href="https://cmduyeen.github.io/posts/viet-bang-markdown-03-danh-sach-khoi-ma/">Cách viết danh sách, trích dẫn và khối mã trong Markdown (Markdown 101 - Phần 03)</a>
-- 2026-11-17: <a href="https://cmduyeen.github.io/posts/viet-bang-markdown-02-tieu-de-doan-van/">Cách viết tiêu đề, tách đoạn văn và nhấn mạnh trong Markdown (Markdown 101 - Phần 02)</a>
-- 2026-11-17: <a href="https://cmduyeen.github.io/posts/viet-bang-markdown-06-xuat-ban-hugo/">Cách xem trước và xuất bản bài Markdown lên Hugo GitHub Pages (Markdown 101 - Phần 06)</a>
-- 2026-11-17: <a href="https://cmduyeen.github.io/posts/cai-lich-am-viet-nam-google-calendar-apple-calendar/">Cài Lịch Âm Việt Nam chuẩn GMT+7 lên Google Calendar và Apple Calendar không cần app ngoài</a>
+- 2026-11-18: <a href="https://cmduyeen.github.io/posts/obsidian-vs-notion-for-builders/">Obsidian vs Notion in 2026: Which Free System Should Builders Choose?</a>
+- 2026-11-17: <a href="https://cmduyeen.github.io/posts/vietnamese-lunar-calendar-google-apple-calendar/">Add a Vietnamese Lunar Calendar (GMT+7) to Google &amp; Apple Calendar Without Extra Apps</a>
+- 2026-11-17: <a href="https://cmduyeen.github.io/posts/build-github-profile-and-blog-in-60-seconds/">Build a Pro GitHub Profile and Personal Blog in 60 Seconds — 100% Free</a>
+- 2026-11-17: <a href="https://cmduyeen.github.io/posts/markdown-101-10-capstone-practice/">Capstone Practice - Write a Complete Markdown Article from Scratch (Markdown 101 - Part 10)</a>
+- 2026-11-17: <a href="https://cmduyeen.github.io/posts/markdown-101-04-links-and-images/">How to Add Links and SEO-Friendly Images in Markdown (Markdown 101 - Part 04)</a>
 <!-- BLOG-POST-LIST:END -->
 
 ## Farm Harvest & Productivity
