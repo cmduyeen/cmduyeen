@@ -145,6 +145,35 @@ def month_range(now):
     return months
 
 
+def render_year_summary_svg(year, count):
+    label = f"{year} HARVEST"
+    badge = f"{count} REPOS"
+    return (
+        '<svg xmlns="http://www.w3.org/2000/svg" width="320" height="34" viewBox="0 0 320 34" role="img" '
+        f'aria-label="{year} - {count} repositories">'
+        '<rect x="1" y="1" width="318" height="32" rx="6" fill="#fff8e7" stroke="#8f563b" stroke-width="1.8"/>'
+        '<rect x="8" y="7" width="112" height="20" rx="4" fill="#5b3a29"/>'
+        f'<text x="64" y="21" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" font-weight="700" fill="#f7eed6">{html.escape(label)}</text>'
+        '<rect x="128" y="7" width="88" height="20" rx="4" fill="#4f8f3c"/>'
+        f'<text x="172" y="21" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" font-weight="700" fill="#f7eed6">{html.escape(badge)}</text>'
+        '<text x="304" y="21" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#8f563b">Click to expand</text>'
+        '</svg>\n'
+    )
+
+
+def write_year_summary_svgs(repositories, profile_repo, assets_dir):
+    visible = [
+        repository for repository in repositories
+        if not repository.get("private")
+        and repository.get("name", "").casefold() != profile_repo.casefold()
+    ]
+    counts = Counter(parse_datetime(repository["created_at"]).year for repository in visible)
+    for year, count in counts.items():
+        (assets_dir / f"year-{year}.svg").write_text(
+            render_year_summary_svg(year, count), encoding="utf-8"
+        )
+
+
 def render_projects(repositories, profile_repo):
     visible = [
         repository for repository in repositories
@@ -176,7 +205,7 @@ def render_projects(repositories, profile_repo):
                 f'<a href="{url}">{name}</a></li>'
             )
         details = (
-            f"<details>\n<summary>{year}-{len(grouped[year])}R</summary>\n\n"
+            f"<details>\n<summary><img src=\"assets/year-{year}.svg\" alt=\"{year}-{len(grouped[year])}R\" align=\"absmiddle\" /></summary>\n\n"
             "<ol>\n" + "\n".join(entries) + "\n</ol>\n</details>"
         )
         sections.append(details)
@@ -429,6 +458,7 @@ def run():
 
     assets = Path("assets")
     assets.mkdir(exist_ok=True)
+    write_year_summary_svgs(repositories, profile_repo, assets)
     write_blog_post_svgs(posts, assets)
     if update_commit_chart:
         (assets / "productivity.svg").write_text(
