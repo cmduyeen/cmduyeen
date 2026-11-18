@@ -22,50 +22,50 @@
 <details>
 <summary><img src="assets/year-2026.svg" alt="2026-32R" align="absmiddle" /></summary>
 
-<ol>
-<li><code>NOV-17</code> -&gt; <a href="https://github.com/cmduyeen/pro-blog-starter-kit">pro-blog-starter-kit</a></li>
-<li><code>NOV-17</code> -&gt; <a href="https://github.com/cmduyeen/pro-github-starter-kit">pro-github-starter-kit</a></li>
-<li><code>NOV-14</code> -&gt; <a href="https://github.com/cmduyeen/malaysia-lunar-calendar">malaysia-lunar-calendar</a></li>
-<li><code>NOV-14</code> -&gt; <a href="https://github.com/cmduyeen/singapore-lunar-calendar">singapore-lunar-calendar</a></li>
-<li><code>NOV-14</code> -&gt; <a href="https://github.com/cmduyeen/korean-lunar-calendar">korean-lunar-calendar</a></li>
-<li><code>NOV-14</code> -&gt; <a href="https://github.com/cmduyeen/macao-lunar-calendar">macao-lunar-calendar</a></li>
-<li><code>NOV-14</code> -&gt; <a href="https://github.com/cmduyeen/hong-kong-lunar-calendar">hong-kong-lunar-calendar</a></li>
-<li><code>NOV-14</code> -&gt; <a href="https://github.com/cmduyeen/taiwan-lunar-calendar">taiwan-lunar-calendar</a></li>
-<li><code>NOV-14</code> -&gt; <a href="https://github.com/cmduyeen/serein-neovim">serein-neovim</a></li>
-<li><code>NOV-12</code> -&gt; <a href="https://github.com/cmduyeen/serein-theme">serein-theme</a></li>
-<li><code>NOV-12</code> -&gt; <a href="https://github.com/cmduyeen/serein-vimium">serein-vimium</a></li>
-<li><code>NOV-12</code> -&gt; <a href="https://github.com/cmduyeen/serein-telegram">serein-telegram</a></li>
-<li><code>NOV-12</code> -&gt; <a href="https://github.com/cmduyeen/serein-sublime-text">serein-sublime-text</a></li>
-<li><code>NOV-12</code> -&gt; <a href="https://github.com/cmduyeen/serein-windows">serein-windows</a></li>
-<li><code>NOV-12</code> -&gt; <a href="https://github.com/cmduyeen/serein-codex">serein-codex</a></li>
-<li><code>NOV-12</code> -&gt; <a href="https://github.com/cmduyeen/serein-antigravity">serein-antigravity</a></li>
-<li><code>NOV-12</code> -&gt; <a href="https://github.com/cmduyeen/serein-vscode">serein-vscode</a></li>
-<li><code>NOV-12</code> -&gt; <a href="https://github.com/cmduyeen/serein-obsidian">serein-obsidian</a></li>
-<li><code>NOV-12</code> -&gt; <a href="https://github.com/cmduyeen/serein-terminal">serein-terminal</a></li>
-<li><code>NOV-08</code> -&gt; <a href="https://github.com/cmduyeen/chinese-lunar-calendar">chinese-lunar-calendar</a></li>
-<li><code>NOV-08</code> -&gt; <a href="https://github.com/cmduyeen/pinkie-sumatrapdf">pinkie-sumatrapdf</a></li>
-<li><code>NOV-08</code> -&gt; <a href="https://github.com/cmduyeen/pinkie-terminal">pinkie-terminal</a></li>
-<li><code>NOV-08</code> -&gt; <a href="https://github.com/cmduyeen/pinkie-obsidian">pinkie-obsidian</a></li>
-<li><code>NOV-08</code> -&gt; <a href="https://github.com/cmduyeen/pinkie-vscode-icons">pinkie-vscode-icons</a></li>
-<li><code>NOV-08</code> -&gt; <a href="https://github.com/cmduyeen/pinkie-vscode">pinkie-vscode</a></li>
-<li><code>NOV-08</code> -&gt; <a href="https://github.com/cmduyeen/pinkie-chrome">pinkie-chrome</a></li>
-<li><code>NOV-08</code> -&gt; <a href="https://github.com/cmduyeen/pinkie-theme">pinkie-theme</a></li>
-<li><code>OCT-21</code> -&gt; <a href="https://github.com/cmduyeen/self-study">self-study</a></li>
-<li><code>OCT-16</code> -&gt; <a href="https://github.com/cmduyeen/cmduyeen.github.io">cmduyeen.github.io</a></li>
-<li><code>JUL-20</code> -&gt; <a href="https://github.com/cmduyeen/pinkie-extension-styler">pinkie-extension-styler</a></li>
-<li><code>APR-23</code> -&gt; <a href="https://github.com/cmduyeen/lich-am-viet-nam">lich-am-viet-nam</a></li>
-<li><code>MAR-25</code> -&gt; <a href="https://github.com/cmduyeen/python-file-organizer-robot">python-file-organizer-robot</a></li>
-</ol>
+<p>
+<a href="https://github.com/cmduyeen/pro-blog-starter-kit"><img src="assets/repo-2026-01.svg" alt="NOV-17: pro-blog-starter-kit" width="49%" /></a>
+<a href="https://github.com/cmduyeen/pro-github-starter-kit"><img src="assets/repo-2026-02.svg" alt="NOV-17: pro-github-starter-kit" width="49%" /></a>
+<a href="https://github.com/cmduyeen/malaysia-lunar-calendar"><img src="assets/repo-2026-03.svg" alt="NOV-14: malaysia-lunar-calendar" width="49%" /></a>
+<a href="https://github.com/cmduyeen/singapore-lunar-calendar"><img src="assets/repo-2026-04.svg" alt="NOV-14: singapore-lunar-calendar" width="49%" /></a>
+<a href="https://github.com/cmduyeen/korean-lunar-calendar"><img src="assets/repo-2026-05.svg" alt="NOV-14: korean-lunar-calendar" width="49%" /></a>
+<a href="https://github.com/cmduyeen/macao-lunar-calendar"><img src="assets/repo-2026-06.svg" alt="NOV-14: macao-lunar-calendar" width="49%" /></a>
+<a href="https://github.com/cmduyeen/hong-kong-lunar-calendar"><img src="assets/repo-2026-07.svg" alt="NOV-14: hong-kong-lunar-calendar" width="49%" /></a>
+<a href="https://github.com/cmduyeen/taiwan-lunar-calendar"><img src="assets/repo-2026-08.svg" alt="NOV-14: taiwan-lunar-calendar" width="49%" /></a>
+<a href="https://github.com/cmduyeen/serein-neovim"><img src="assets/repo-2026-09.svg" alt="NOV-14: serein-neovim" width="49%" /></a>
+<a href="https://github.com/cmduyeen/serein-theme"><img src="assets/repo-2026-10.svg" alt="NOV-12: serein-theme" width="49%" /></a>
+<a href="https://github.com/cmduyeen/serein-vimium"><img src="assets/repo-2026-11.svg" alt="NOV-12: serein-vimium" width="49%" /></a>
+<a href="https://github.com/cmduyeen/serein-telegram"><img src="assets/repo-2026-12.svg" alt="NOV-12: serein-telegram" width="49%" /></a>
+<a href="https://github.com/cmduyeen/serein-sublime-text"><img src="assets/repo-2026-13.svg" alt="NOV-12: serein-sublime-text" width="49%" /></a>
+<a href="https://github.com/cmduyeen/serein-windows"><img src="assets/repo-2026-14.svg" alt="NOV-12: serein-windows" width="49%" /></a>
+<a href="https://github.com/cmduyeen/serein-codex"><img src="assets/repo-2026-15.svg" alt="NOV-12: serein-codex" width="49%" /></a>
+<a href="https://github.com/cmduyeen/serein-antigravity"><img src="assets/repo-2026-16.svg" alt="NOV-12: serein-antigravity" width="49%" /></a>
+<a href="https://github.com/cmduyeen/serein-vscode"><img src="assets/repo-2026-17.svg" alt="NOV-12: serein-vscode" width="49%" /></a>
+<a href="https://github.com/cmduyeen/serein-obsidian"><img src="assets/repo-2026-18.svg" alt="NOV-12: serein-obsidian" width="49%" /></a>
+<a href="https://github.com/cmduyeen/serein-terminal"><img src="assets/repo-2026-19.svg" alt="NOV-12: serein-terminal" width="49%" /></a>
+<a href="https://github.com/cmduyeen/chinese-lunar-calendar"><img src="assets/repo-2026-20.svg" alt="NOV-08: chinese-lunar-calendar" width="49%" /></a>
+<a href="https://github.com/cmduyeen/pinkie-sumatrapdf"><img src="assets/repo-2026-21.svg" alt="NOV-08: pinkie-sumatrapdf" width="49%" /></a>
+<a href="https://github.com/cmduyeen/pinkie-terminal"><img src="assets/repo-2026-22.svg" alt="NOV-08: pinkie-terminal" width="49%" /></a>
+<a href="https://github.com/cmduyeen/pinkie-obsidian"><img src="assets/repo-2026-23.svg" alt="NOV-08: pinkie-obsidian" width="49%" /></a>
+<a href="https://github.com/cmduyeen/pinkie-vscode-icons"><img src="assets/repo-2026-24.svg" alt="NOV-08: pinkie-vscode-icons" width="49%" /></a>
+<a href="https://github.com/cmduyeen/pinkie-vscode"><img src="assets/repo-2026-25.svg" alt="NOV-08: pinkie-vscode" width="49%" /></a>
+<a href="https://github.com/cmduyeen/pinkie-chrome"><img src="assets/repo-2026-26.svg" alt="NOV-08: pinkie-chrome" width="49%" /></a>
+<a href="https://github.com/cmduyeen/pinkie-theme"><img src="assets/repo-2026-27.svg" alt="NOV-08: pinkie-theme" width="49%" /></a>
+<a href="https://github.com/cmduyeen/self-study"><img src="assets/repo-2026-28.svg" alt="OCT-21: self-study" width="49%" /></a>
+<a href="https://github.com/cmduyeen/cmduyeen.github.io"><img src="assets/repo-2026-29.svg" alt="OCT-16: cmduyeen.github.io" width="49%" /></a>
+<a href="https://github.com/cmduyeen/pinkie-extension-styler"><img src="assets/repo-2026-30.svg" alt="JUL-20: pinkie-extension-styler" width="49%" /></a>
+<a href="https://github.com/cmduyeen/lich-am-viet-nam"><img src="assets/repo-2026-31.svg" alt="APR-23: lich-am-viet-nam" width="49%" /></a>
+<a href="https://github.com/cmduyeen/python-file-organizer-robot"><img src="assets/repo-2026-32.svg" alt="MAR-25: python-file-organizer-robot" width="49%" /></a>
+</p>
 </details>
 
 <details>
 <summary><img src="assets/year-2025.svg" alt="2025-3R" align="absmiddle" /></summary>
 
-<ol>
-<li><code>JUN-10</code> -&gt; <a href="https://github.com/cmduyeen/Focus-Assistant-Extension">Focus-Assistant-Extension</a></li>
-<li><code>JUN-04</code> -&gt; <a href="https://github.com/cmduyeen/Pomodoro-Timer-PowerShell">Pomodoro-Timer-PowerShell</a></li>
-<li><code>APR-10</code> -&gt; <a href="https://github.com/cmduyeen/CleanWindowsCMD-Free-Safe">CleanWindowsCMD-Free-Safe</a></li>
-</ol>
+<p>
+<a href="https://github.com/cmduyeen/Focus-Assistant-Extension"><img src="assets/repo-2025-01.svg" alt="JUN-10: Focus-Assistant-Extension" width="49%" /></a>
+<a href="https://github.com/cmduyeen/Pomodoro-Timer-PowerShell"><img src="assets/repo-2025-02.svg" alt="JUN-04: Pomodoro-Timer-PowerShell" width="49%" /></a>
+<a href="https://github.com/cmduyeen/CleanWindowsCMD-Free-Safe"><img src="assets/repo-2025-03.svg" alt="APR-10: CleanWindowsCMD-Free-Safe" width="49%" /></a>
+</p>
 </details>
 <!-- MY-STUFF:END -->
 
