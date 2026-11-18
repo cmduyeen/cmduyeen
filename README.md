@@ -12,22 +12,9 @@
 </p>
 
 <p align="center">
-  <a href="https://cmduyeen.github.io/about/">
-    <img src="assets/about-card.svg" alt="About Dyn — Character Sheet" width="100%" />
-  </a>
-</p>
-
-<p align="center">
   <a href="https://cmduyeen.github.io/tools/">
     <img src="assets/projects-grid.svg" alt="Featured Browser Tools &amp; Open-Source Suites" width="100%" />
   </a>
-</p>
-
-<p align="center">
-  <a href="https://cmduyeen.github.io/pro-blog-starter-kit/"><img src="https://img.shields.io/badge/Launch-Pro_Blog_Kit-4f8f3c?style=flat-square" alt="Pro Blog Starter Kit" /></a>
-  <a href="https://cmduyeen.github.io/pro-github-starter-kit/"><img src="https://img.shields.io/badge/Launch-Pro_GitHub_Kit-8f563b?style=flat-square" alt="Pro GitHub Starter Kit" /></a>
-  <a href="https://cmduyeen.github.io/lich-am-viet-nam/"><img src="https://img.shields.io/badge/Launch-Lunar_Calendar-d97706?style=flat-square" alt="Vietnamese Lunar Calendar" /></a>
-  <a href="https://github.com/cmduyeen/serein-theme"><img src="https://img.shields.io/badge/Explore-Serein_Theme-5b3a29?style=flat-square" alt="Serein & Pinkie Themes" /></a>
 </p>
 
 <p><img src="assets/heading-mystuff.svg" alt="My Stuff" width="100%" /></p>
