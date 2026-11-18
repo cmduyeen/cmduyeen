@@ -183,16 +183,38 @@ def render_projects(repositories, profile_repo):
     return "\n\n".join(sections) or "*No projects yet.*"
 
 
+def render_blog_post_svg(post):
+    iso = post["date"].date().isoformat()
+    title = post["title"]
+    if len(title) > 76:
+        title = title[:73].rstrip() + "..."
+    return (
+        '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 42" role="img" '
+        f'aria-label="{html.escape(iso + ": " + post["title"], quote=True)}">'
+        '<rect x="1" y="1" width="838" height="40" rx="7" fill="#fff8e7" stroke="#8f563b" stroke-width="1.8"/>'
+        '<rect x="10" y="9" width="92" height="24" rx="4" fill="#4f8f3c"/>'
+        f'<text x="56" y="25" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11.5" font-weight="700" fill="#f7eed6">{html.escape(iso)}</text>'
+        f'<text x="116" y="25" font-family="-apple-system, BlinkMacSystemFont, \'Segoe UI\', sans-serif" font-size="13.5" font-weight="600" fill="#2d241c">{html.escape(title)}</text>'
+        '<text x="820" y="26" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14" font-weight="700" fill="#8f563b">→</text>'
+        '</svg>\n'
+    )
+
+
+def write_blog_post_svgs(posts, assets_dir, limit=5):
+    for index, post in enumerate(posts[:limit], start=1):
+        (assets_dir / f"post-{index}.svg").write_text(
+            render_blog_post_svg(post), encoding="utf-8"
+        )
+
+
 def render_blog_posts(posts, limit=5):
     lines = []
-    for post in posts[:limit]:
+    for index, post in enumerate(posts[:limit], start=1):
         iso = post["date"].date().isoformat()
-        badge_date = iso.replace("-", "--")
         url = html.escape(validate_https_url(post["url"], "Blog post URL"), quote=True)
-        title = html.escape(post["title"])
+        alt = html.escape(f"{iso}: {post['title']}", quote=True)
         lines.append(
-            f'- <img src="https://img.shields.io/badge/{badge_date}-4f8f3c?style=flat-square" alt="{iso}" align="absmiddle" /> '
-            f'<a href="{url}">{title}</a>'
+            f'<a href="{url}"><img src="assets/post-{index}.svg" alt="{alt}" width="100%" /></a>'
         )
     return "\n".join(lines) or "*No blog posts yet.*"
 
@@ -407,6 +429,7 @@ def run():
 
     assets = Path("assets")
     assets.mkdir(exist_ok=True)
+    write_blog_post_svgs(posts, assets)
     if update_commit_chart:
         (assets / "productivity.svg").write_text(
             render_productivity_svg(months, commit_counts, owner), encoding="utf-8", newline="\n"
