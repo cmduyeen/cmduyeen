@@ -30,7 +30,7 @@
   <a href="https://github.com/cmduyeen/serein-theme"><img src="https://img.shields.io/badge/Explore-Serein_Theme-5b3a29?style=flat-square" alt="Serein & Pinkie Themes" /></a>
 </p>
 
-## My Stuff
+<p><img src="assets/heading-mystuff.svg" alt="My Stuff" width="100%" /></p>
 
 <!-- MY-STUFF:START -->
 <details>
@@ -83,7 +83,7 @@
 </details>
 <!-- MY-STUFF:END -->
 
-## Latest from the Blog
+<p><img src="assets/heading-blog.svg" alt="Latest from the Blog" width="100%" /></p>
 
 <!-- BLOG-POST-LIST:START -->
 - 2026-11-18: <a href="https://cmduyeen.github.io/posts/obsidian-vs-notion-for-builders/">Obsidian vs Notion in 2026: Which Free System Should Builders Choose?</a>
@@ -93,7 +93,7 @@
 - 2026-11-17: <a href="https://cmduyeen.github.io/posts/markdown-101-04-links-and-images/">How to Add Links and SEO-Friendly Images in Markdown (Markdown 101 - Part 04)</a>
 <!-- BLOG-POST-LIST:END -->
 
-## Farm Harvest & Productivity
+<p><img src="assets/heading-harvest.svg" alt="Farm Harvest & Productivity" width="100%" /></p>
 
 <!-- PRODUCTIVITY:START -->
 ![Public commits by month](assets/productivity.svg)

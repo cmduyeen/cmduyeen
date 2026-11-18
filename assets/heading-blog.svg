@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 42" role="img" aria-label="Latest from the Blog">
+  <rect x="0" y="0" width="840" height="42" rx="7" fill="#5b3a29"/>
+  <rect x="3" y="3" width="834" height="36" rx="5" fill="#8f563b"/>
+  <rect x="6" y="5" width="828" height="3" rx="1.5" fill="#a86a4c"/>
+  <g transform="translate(16,11) scale(1.25)" shape-rendering="crispEdges">
+    <rect x="3" y="2" width="9" height="12" fill="#5b3a29"/>
+    <rect x="4" y="3" width="7" height="10" fill="#f7eed6"/>
+    <rect x="5" y="5" width="5" height="1" fill="#4f8f3c"/>
+    <rect x="5" y="7" width="5" height="1" fill="#8f563b"/>
+    <rect x="10" y="9" width="3" height="3" fill="#fde047"/>
+  </g>
+  <text x="44" y="26" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13.5" font-weight="700" fill="#f7eed6">LATEST FROM THE BLOG</text>
+</svg>

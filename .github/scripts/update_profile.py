@@ -184,12 +184,17 @@ def render_projects(repositories, profile_repo):
 
 
 def render_blog_posts(posts, limit=5):
-    return "\n".join(
-        f"- {post['date'].date().isoformat()}: "
-        f'<a href="{html.escape(validate_https_url(post["url"], "Blog post URL"), quote=True)}">'
-        f"{html.escape(post['title'])}</a>"
-        for post in posts[:limit]
-    ) or "*No blog posts yet.*"
+    lines = []
+    for post in posts[:limit]:
+        iso = post["date"].date().isoformat()
+        badge_date = iso.replace("-", "--")
+        url = html.escape(validate_https_url(post["url"], "Blog post URL"), quote=True)
+        title = html.escape(post["title"])
+        lines.append(
+            f'- <img src="https://img.shields.io/badge/{badge_date}-4f8f3c?style=flat-square" alt="{iso}" align="absmiddle" /> '
+            f'<a href="{url}">{title}</a>'
+        )
+    return "\n".join(lines) or "*No blog posts yet.*"
 
 
 def replace_section(content, marker, value):
