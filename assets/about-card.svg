@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 154" role="img" aria-labelledby="about-title about-desc">
+  <title id="about-title">About Dyn — Character Sheet</title>
+  <desc id="about-desc">Stardew Valley Cozy character card for cmduyeen.</desc>
+
+  <!-- Outer wood frame & warm parchment -->
+  <rect x="1" y="1" width="838" height="152" rx="10" fill="#f7eed6" stroke="#8f563b" stroke-width="2.5"/>
+  <rect x="6" y="6" width="828" height="142" rx="7" fill="none" stroke="#e2d4b7" stroke-width="1.5"/>
+
+  <!-- Left Pixel Avatar Frame -->
+  <rect x="22" y="22" width="110" height="110" rx="8" fill="#5b3a29"/>
+  <rect x="26" y="26" width="102" height="102" rx="6" fill="#2d241c"/>
+  <!-- Cute Pixel Junimo + Sprout inside frame -->
+  <g shape-rendering="crispEdges">
+    <rect x="74" y="40" width="6" height="8" fill="#4f8f3c"/>
+    <rect x="66" y="34" width="16" height="6" fill="#7ec850"/>
+    <rect x="54" y="48" width="46" height="38" fill="#7ec850"/>
+    <rect x="48" y="58" width="58" height="16" fill="#7ec850"/>
+    <rect x="54" y="80" width="46" height="6" fill="#4f8f3c"/>
+    <rect x="60" y="86" width="10" height="8" fill="#7ec850"/>
+    <rect x="84" y="86" width="10" height="8" fill="#7ec850"/>
+    <!-- Eyes -->
+    <rect x="62" y="58" width="6" height="8" fill="#2d241c"/>
+    <rect x="86" y="58" width="6" height="8" fill="#2d241c"/>
+    <!-- Blush -->
+    <rect x="56" y="66" width="6" height="4" fill="#f59e0b"/>
+    <rect x="92" y="66" width="6" height="4" fill="#f59e0b"/>
+    <!-- Ground grass -->
+    <rect x="26" y="110" width="102" height="18" fill="#4f8f3c"/>
+    <rect x="26" y="110" width="102" height="4" fill="#7ec850"/>
+  </g>
+
+  <!-- Center Bio -->
+  <rect x="150" y="22" width="132" height="20" rx="4" fill="#4f8f3c"/>
+  <text x="160" y="36" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" font-weight="700" fill="#f7eed6">FARMER · ISFJ</text>
+
+  <text x="150" y="66" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="21" font-weight="700" fill="#2d241c">Dyn (cmduyeen)</text>
+  <text x="150" y="90" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13.5" fill="#5b3a29">I read, code, and cook — building calm, fast tools for the web.</text>
+
+  <text x="150" y="120" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#4f8f3c">✦ Focus: Engineering notes, automation workflows &amp; minimalist UI</text>
+
+  <!-- Right Divider -->
+  <line x1="566" y1="24" x2="566" y2="130" stroke="#d9c6a3" stroke-width="1.5" stroke-dasharray="4 4"/>
+
+  <!-- Right Craftbench Stack -->
+  <text x="584" y="36" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" font-weight="700" fill="#8f563b">CRAFTBENCH STACK</text>
+
+  <rect x="584" y="48" width="70" height="24" rx="5" fill="#fff8e7" stroke="#8f563b" stroke-width="1.5"/>
+  <text x="619" y="64" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" font-weight="600" fill="#2d241c">Hugo</text>
+
+  <rect x="662" y="48" width="84" height="24" rx="5" fill="#fff8e7" stroke="#8f563b" stroke-width="1.5"/>
+  <text x="704" y="64" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" font-weight="600" fill="#2d241c">Obsidian</text>
+
+  <rect x="754" y="48" width="66" height="24" rx="5" fill="#fff8e7" stroke="#8f563b" stroke-width="1.5"/>
+  <text x="787" y="64" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" font-weight="600" fill="#2d241c">Python</text>
+
+  <rect x="584" y="80" width="82" height="24" rx="5" fill="#fff8e7" stroke="#8f563b" stroke-width="1.5"/>
+  <text x="625" y="96" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" font-weight="600" fill="#2d241c">VS Code</text>
+
+  <rect x="674" y="80" width="146" height="24" rx="5" fill="#fff8e7" stroke="#8f563b" stroke-width="1.5"/>
+  <text x="747" y="96" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" font-weight="600" fill="#2d241c">GitHub Actions</text>
+
+  <text x="584" y="124" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" fill="#6e523f">Home: cmduyeen.github.io</text>
+</svg>

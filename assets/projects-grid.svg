@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 218" role="img" aria-labelledby="proj-title proj-desc">
+  <title id="proj-title">Featured Browser Tools &amp; Open-Source Suites</title>
+  <desc id="proj-desc">Stardew Valley Cozy 2x2 showcase of cmduyeen web apps and themes.</desc>
+
+  <!-- Outer wood frame & parchment -->
+  <rect x="1" y="1" width="838" height="216" rx="10" fill="#f7eed6" stroke="#8f563b" stroke-width="2.5"/>
+  <text x="22" y="30" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12.5" font-weight="700" fill="#5b3a29">★ FEATURED BROWSER TOOLS &amp; OPEN-SOURCE SUITES</text>
+  <text x="818" y="30" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" fill="#4f8f3c">100% Free · Runs in Browser</text>
+
+  <!-- Card 1: Pro Blog Starter Kit -->
+  <rect x="20" y="44" width="392" height="74" rx="8" fill="#fff8e7" stroke="#8f563b" stroke-width="2"/>
+  <rect x="32" y="58" width="44" height="44" rx="6" fill="#e8dbb8" stroke="#8f563b" stroke-width="1.5"/>
+  <g transform="translate(42,68) scale(1.5)" shape-rendering="crispEdges">
+    <rect x="3" y="2" width="9" height="12" fill="#8f563b"/><rect x="4" y="3" width="7" height="10" fill="#fff8e7"/>
+    <rect x="5" y="5" width="5" height="1" fill="#4f8f3c"/><rect x="5" y="7" width="5" height="1" fill="#b45309"/>
+    <rect x="10" y="9" width="3" height="3" fill="#f59e0b"/>
+  </g>
+  <text x="88" y="68" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="15" font-weight="700" fill="#2d241c">Pro Blog Starter Kit</text>
+  <rect x="294" y="54" width="104" height="18" rx="4" fill="#4f8f3c"/>
+  <text x="346" y="67" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="9.5" font-weight="700" fill="#f7eed6">WEB APP · FREE</text>
+  <text x="88" y="90" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" fill="#5b3a29">Scaffold a Hugo or Jekyll blog on GitHub Pages in 60s.</text>
+  <text x="88" y="106" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#4f8f3c">cmduyeen.github.io/pro-blog-starter-kit/</text>
+
+  <!-- Card 2: Pro GitHub Starter Kit -->
+  <rect x="428" y="44" width="392" height="74" rx="8" fill="#fff8e7" stroke="#8f563b" stroke-width="2"/>
+  <rect x="440" y="58" width="44" height="44" rx="6" fill="#e8dbb8" stroke="#8f563b" stroke-width="1.5"/>
+  <g transform="translate(450,68) scale(1.5)" shape-rendering="crispEdges">
+    <rect x="6" y="2" width="4" height="4" fill="#d97706"/><rect x="5" y="4" width="6" height="4" fill="#fde68a"/>
+    <rect x="4" y="9" width="8" height="5" fill="#4f8f3c"/><rect x="5" y="10" width="6" height="4" fill="#7ec850"/>
+  </g>
+  <text x="496" y="68" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="15" font-weight="700" fill="#2d241c">Pro GitHub Starter Kit</text>
+  <rect x="702" y="54" width="104" height="18" rx="4" fill="#4f8f3c"/>
+  <text x="754" y="67" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="9.5" font-weight="700" fill="#f7eed6">WEB APP · FREE</text>
+  <text x="496" y="90" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" fill="#5b3a29">Build a GitHub Profile README with 9 themes &amp; preview.</text>
+  <text x="496" y="106" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#4f8f3c">cmduyeen.github.io/pro-github-starter-kit/</text>
+
+  <!-- Card 3: Vietnamese Lunar Calendar -->
+  <rect x="20" y="128" width="392" height="74" rx="8" fill="#fff8e7" stroke="#8f563b" stroke-width="2"/>
+  <rect x="32" y="142" width="44" height="44" rx="6" fill="#e8dbb8" stroke="#8f563b" stroke-width="1.5"/>
+  <g transform="translate(42,152) scale(1.5)" shape-rendering="crispEdges">
+    <rect x="2" y="3" width="12" height="11" fill="#8f563b"/><rect x="3" y="4" width="10" height="2" fill="#b45309"/>
+    <rect x="3" y="6" width="10" height="7" fill="#fff8e7"/><rect x="5" y="8" width="2" height="2" fill="#7ec850"/>
+    <rect x="9" y="8" width="2" height="2" fill="#f59e0b"/>
+  </g>
+  <text x="88" y="152" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="15" font-weight="700" fill="#2d241c">Vietnamese Lunar Calendar</text>
+  <rect x="294" y="138" width="104" height="18" rx="4" fill="#d97706"/>
+  <text x="346" y="151" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="9.5" font-weight="700" fill="#fff8e7">GMT+7 · ICS</text>
+  <text x="88" y="174" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" fill="#5b3a29">Customize lunar dates, anniversaries &amp; export .ics feeds.</text>
+  <text x="88" y="190" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#4f8f3c">cmduyeen.github.io/lich-am-viet-nam/</text>
+
+  <!-- Card 4: Serein & Pinkie Themes -->
+  <rect x="428" y="128" width="392" height="74" rx="8" fill="#fff8e7" stroke="#8f563b" stroke-width="2"/>
+  <rect x="440" y="142" width="44" height="44" rx="6" fill="#e8dbb8" stroke="#8f563b" stroke-width="1.5"/>
+  <g transform="translate(450,152) scale(1.5)" shape-rendering="crispEdges">
+    <rect x="3" y="3" width="10" height="10" fill="#8f563b"/><rect x="4" y="4" width="8" height="8" fill="#fff8e7"/>
+    <rect x="5" y="5" width="2" height="2" fill="#7ec850"/><rect x="9" y="5" width="2" height="2" fill="#f59e0b"/>
+    <rect x="5" y="9" width="2" height="2" fill="#d97706"/><rect x="9" y="9" width="2" height="2" fill="#4f8f3c"/>
+  </g>
+  <text x="496" y="152" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="15" font-weight="700" fill="#2d241c">Serein &amp; Pinkie Themes</text>
+  <rect x="702" y="138" width="104" height="18" rx="4" fill="#5b3a29"/>
+  <text x="754" y="151" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="9.5" font-weight="700" fill="#f7eed6">MIT · SOURCE</text>
+  <text x="496" y="174" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" fill="#5b3a29">Minimalist color suites for VS Code, Neovim &amp; Obsidian.</text>
+  <text x="496" y="190" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#4f8f3c">github.com/cmduyeen/serein-theme</text>
+</svg>

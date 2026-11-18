@@ -11,21 +11,24 @@
   <a href="https://cmduyeen.github.io/index.xml"><img src="https://img.shields.io/badge/RSS-Subscribe-5b3a29?style=for-the-badge&logo=rss&logoColor=f7eed6" alt="RSS" /></a>
 </p>
 
-## About
+<p align="center">
+  <a href="https://cmduyeen.github.io/about/">
+    <img src="assets/about-card.svg" alt="About Dyn — Character Sheet" width="100%" />
+  </a>
+</p>
 
-I [read](https://z-library.sk/profile/45325055/0f1fbf), [code](https://github.com/cmduyeen/self-study), and cook · [ISFJ](https://www.16personalities.com/isfj-personality)
+<p align="center">
+  <a href="https://cmduyeen.github.io/tools/">
+    <img src="assets/projects-grid.svg" alt="Featured Browser Tools &amp; Open-Source Suites" width="100%" />
+  </a>
+</p>
 
-- **Crafting**: `Hugo` · `Obsidian` · `VS Code` · `Stardew Cozy UI`
-- **Writing**: Engineering notes, automation workflows, and minimalist developer tools at [cmduyeen.github.io](https://cmduyeen.github.io/)
-
-## Featured Browser Tools
-
-| Project | What it does | Link |
-| :--- | :--- | :--- |
-| **Pro Blog Starter Kit** | Scaffold a Hugo or Jekyll blog on GitHub Pages in 60s | [Launch App →](https://cmduyeen.github.io/pro-blog-starter-kit/) |
-| **Pro GitHub Starter Kit** | Build a GitHub Profile README with 9 themes &amp; live preview | [Launch App →](https://cmduyeen.github.io/pro-github-starter-kit/) |
-| **Vietnamese Lunar Calendar** | GMT+7 lunar dates, anniversaries &amp; `.ics` calendar export | [Launch App →](https://cmduyeen.github.io/lich-am-viet-nam/) |
-| **Serein &amp; Pinkie Themes** | Warm &amp; pastel color suites for VS Code, Neovim, Obsidian | [Explore →](https://github.com/cmduyeen/serein-theme) |
+<p align="center">
+  <a href="https://cmduyeen.github.io/pro-blog-starter-kit/"><img src="https://img.shields.io/badge/Launch-Pro_Blog_Kit-4f8f3c?style=flat-square" alt="Pro Blog Starter Kit" /></a>
+  <a href="https://cmduyeen.github.io/pro-github-starter-kit/"><img src="https://img.shields.io/badge/Launch-Pro_GitHub_Kit-8f563b?style=flat-square" alt="Pro GitHub Starter Kit" /></a>
+  <a href="https://cmduyeen.github.io/lich-am-viet-nam/"><img src="https://img.shields.io/badge/Launch-Lunar_Calendar-d97706?style=flat-square" alt="Vietnamese Lunar Calendar" /></a>
+  <a href="https://github.com/cmduyeen/serein-theme"><img src="https://img.shields.io/badge/Explore-Serein_Theme-5b3a29?style=flat-square" alt="Serein & Pinkie Themes" /></a>
+</p>
 
 ## My Stuff
 
