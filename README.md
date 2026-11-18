@@ -72,11 +72,11 @@
 <p><img src="assets/heading-blog.svg" alt="Latest from the Blog" width="100%" /></p>
 
 <!-- BLOG-POST-LIST:START -->
-- <img src="https://img.shields.io/badge/2026--11--18-4f8f3c?style=flat-square" alt="2026-11-18" align="absmiddle" /> <a href="https://cmduyeen.github.io/posts/obsidian-vs-notion-for-builders/">Obsidian vs Notion in 2026: Which Free System Should Builders Choose?</a>
-- <img src="https://img.shields.io/badge/2026--11--17-4f8f3c?style=flat-square" alt="2026-11-17" align="absmiddle" /> <a href="https://cmduyeen.github.io/posts/vietnamese-lunar-calendar-google-apple-calendar/">Add a Vietnamese Lunar Calendar (GMT+7) to Google &amp; Apple Calendar Without Extra Apps</a>
-- <img src="https://img.shields.io/badge/2026--11--17-4f8f3c?style=flat-square" alt="2026-11-17" align="absmiddle" /> <a href="https://cmduyeen.github.io/posts/build-github-profile-and-blog-in-60-seconds/">Build a Pro GitHub Profile and Personal Blog in 60 Seconds — 100% Free</a>
-- <img src="https://img.shields.io/badge/2026--11--17-4f8f3c?style=flat-square" alt="2026-11-17" align="absmiddle" /> <a href="https://cmduyeen.github.io/posts/markdown-101-10-capstone-practice/">Capstone Practice - Write a Complete Markdown Article from Scratch (Markdown 101 - Part 10)</a>
-- <img src="https://img.shields.io/badge/2026--11--17-4f8f3c?style=flat-square" alt="2026-11-17" align="absmiddle" /> <a href="https://cmduyeen.github.io/posts/markdown-101-04-links-and-images/">How to Add Links and SEO-Friendly Images in Markdown (Markdown 101 - Part 04)</a>
+<a href="https://cmduyeen.github.io/posts/obsidian-vs-notion-for-builders/"><img src="assets/post-1.svg" alt="2026-11-18: Obsidian vs Notion in 2026: Which Free System Should Builders Choose?" width="100%" /></a>
+<a href="https://cmduyeen.github.io/posts/vietnamese-lunar-calendar-google-apple-calendar/"><img src="assets/post-2.svg" alt="2026-11-17: Add a Vietnamese Lunar Calendar (GMT+7) to Google &amp; Apple Calendar Without Extra Apps" width="100%" /></a>
+<a href="https://cmduyeen.github.io/posts/build-github-profile-and-blog-in-60-seconds/"><img src="assets/post-3.svg" alt="2026-11-17: Build a Pro GitHub Profile and Personal Blog in 60 Seconds — 100% Free" width="100%" /></a>
+<a href="https://cmduyeen.github.io/posts/markdown-101-10-capstone-practice/"><img src="assets/post-4.svg" alt="2026-11-17: Capstone Practice - Write a Complete Markdown Article from Scratch (Markdown 101 - Part 10)" width="100%" /></a>
+<a href="https://cmduyeen.github.io/posts/markdown-101-04-links-and-images/"><img src="assets/post-5.svg" alt="2026-11-17: How to Add Links and SEO-Friendly Images in Markdown (Markdown 101 - Part 04)" width="100%" /></a>
 <!-- BLOG-POST-LIST:END -->
 
 <p><img src="assets/heading-harvest.svg" alt="Farm Harvest & Productivity" width="100%" /></p>
