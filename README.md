@@ -20,7 +20,7 @@
 
 <!-- MY-STUFF:START -->
 <details>
-<summary>2026-32R</summary>
+<summary><img src="assets/year-2026.svg" alt="2026-32R" align="absmiddle" /></summary>
 
 <ol>
 <li><code>NOV-17</code> -&gt; <a href="https://github.com/cmduyeen/pro-blog-starter-kit">pro-blog-starter-kit</a></li>
@@ -59,7 +59,7 @@
 </details>
 
 <details>
-<summary>2025-3R</summary>
+<summary><img src="assets/year-2025.svg" alt="2025-3R" align="absmiddle" /></summary>
 
 <ol>
 <li><code>JUN-10</code> -&gt; <a href="https://github.com/cmduyeen/Focus-Assistant-Extension">Focus-Assistant-Extension</a></li>
