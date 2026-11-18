@@ -1,10 +1,33 @@
-# About
+<p align="center">
+  <a href="https://cmduyeen.github.io/">
+    <img src="assets/banner.svg" alt="~/dyn — Notes, Reviews &amp; Personal Projects" width="100%" />
+  </a>
+</p>
 
-I [read](https://z-library.sk/profile/45325055/0f1fbf), [code](https://github.com/cmduyeen/self-study), and cook.
+<p align="center">
+  <a href="https://cmduyeen.github.io/"><img src="https://img.shields.io/badge/Blog-cmduyeen.github.io-4f8f3c?style=for-the-badge&logo=hugo&logoColor=f7eed6" alt="Blog" /></a>
+  <a href="https://cmduyeen.github.io/tools/"><img src="https://img.shields.io/badge/Projects-Browser_Tools-8f563b?style=for-the-badge" alt="Projects" /></a>
+  <a href="https://cmduyeen.github.io/about/"><img src="https://img.shields.io/badge/About-Character_Sheet-d97706?style=for-the-badge" alt="About" /></a>
+  <a href="https://cmduyeen.github.io/index.xml"><img src="https://img.shields.io/badge/RSS-Subscribe-5b3a29?style=for-the-badge&logo=rss&logoColor=f7eed6" alt="RSS" /></a>
+</p>
 
-[ISFJ](https://www.16personalities.com/isfj-personality).
+## About
 
-# My stuff
+I [read](https://z-library.sk/profile/45325055/0f1fbf), [code](https://github.com/cmduyeen/self-study), and cook · [ISFJ](https://www.16personalities.com/isfj-personality)
+
+- **Crafting**: `Hugo` · `Obsidian` · `VS Code` · `Stardew Cozy UI`
+- **Writing**: Engineering notes, automation workflows, and minimalist developer tools at [cmduyeen.github.io](https://cmduyeen.github.io/)
+
+## Featured Browser Tools
+
+| Project | What it does | Link |
+| :--- | :--- | :--- |
+| **Pro Blog Starter Kit** | Scaffold a Hugo or Jekyll blog on GitHub Pages in 60s | [Launch App →](https://cmduyeen.github.io/pro-blog-starter-kit/) |
+| **Pro GitHub Starter Kit** | Build a GitHub Profile README with 9 themes &amp; live preview | [Launch App →](https://cmduyeen.github.io/pro-github-starter-kit/) |
+| **Vietnamese Lunar Calendar** | GMT+7 lunar dates, anniversaries &amp; `.ics` calendar export | [Launch App →](https://cmduyeen.github.io/lich-am-viet-nam/) |
+| **Serein &amp; Pinkie Themes** | Warm &amp; pastel color suites for VS Code, Neovim, Obsidian | [Explore →](https://github.com/cmduyeen/serein-theme) |
+
+## My Stuff
 
 <!-- MY-STUFF:START -->
 <details>
@@ -57,7 +80,7 @@ I [read](https://z-library.sk/profile/45325055/0f1fbf), [code](https://github.co
 </details>
 <!-- MY-STUFF:END -->
 
-# Blog
+## Latest from the Blog
 
 <!-- BLOG-POST-LIST:START -->
 - 2026-11-17: <a href="https://cmduyeen.github.io/posts/viet-bang-markdown-04-lien-ket-anh/">Cách chèn liên kết và ảnh chuẩn SEO trong Markdown (Markdown 101 - Phần 04)</a>
@@ -67,7 +90,7 @@ I [read](https://z-library.sk/profile/45325055/0f1fbf), [code](https://github.co
 - 2026-11-17: <a href="https://cmduyeen.github.io/posts/cai-lich-am-viet-nam-google-calendar-apple-calendar/">Cài Lịch Âm Việt Nam chuẩn GMT+7 lên Google Calendar và Apple Calendar không cần app ngoài</a>
 <!-- BLOG-POST-LIST:END -->
 
-# Productivity
+## Farm Harvest & Productivity
 
 <!-- PRODUCTIVITY:START -->
 ![Public commits by month](assets/productivity.svg)

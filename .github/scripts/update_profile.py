@@ -247,9 +247,10 @@ def svg_document(title, description, body):
         f"<title id=\"chart-title\">{html.escape(title)}</title>"
         f"<desc id=\"chart-desc\">{html.escape(description)}</desc>"
         '<style>text{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}'
-        '.axis{fill:#57606a;font-size:11px}.grid{stroke:#d8dee4;stroke-width:1}'
-        '.caption{fill:#24292f;font-size:15px;font-weight:600}'
-        '.value{fill:#57606a;font-size:10px;text-anchor:middle}</style>'
+        '.axis{fill:#6e523f;font-size:11px}.grid{stroke:#e2d4b7;stroke-width:1}'
+        '.caption{fill:#2d241c;font-size:15px;font-weight:700}'
+        '.value{fill:#5b3a29;font-size:10px;font-weight:600;text-anchor:middle}</style>'
+        '<rect x="1" y="1" width="758" height="268" rx="10" fill="#f7eed6" stroke="#8f563b" stroke-width="2"/>'
         f"{body}</svg>\n"
     )
 
@@ -283,7 +284,7 @@ def render_productivity_svg(months, counts, owner):
         y = top + height - bar_height
         elements.append(
             f'<rect x="{x:.1f}" y="{y:.1f}" width="{bar_width:.1f}" '
-            f'height="{bar_height:.1f}" rx="3" fill="#2da44e"/>'
+            f'height="{bar_height:.1f}" rx="3" fill="#4f8f3c"/>'
         )
         elements.append(f'<text class="value" x="{x + bar_width / 2:.1f}" y="{y - 5:.1f}">{value}</text>')
         elements.append(
@@ -321,8 +322,8 @@ def render_trend_svg(months, repository_counts, blog_counts):
         )
         return "".join(output)
 
-    elements.append(series(repo_values, "#1f6feb"))
-    elements.append(series(blog_values, "#bf8700"))
+    elements.append(series(repo_values, "#4f8f3c"))
+    elements.append(series(blog_values, "#d97706"))
     for index, month in enumerate(months):
         x = left + width * index / max(1, len(months) - 1)
         elements.append(
@@ -330,9 +331,9 @@ def render_trend_svg(months, repository_counts, blog_counts):
             f"{month_label(month)}</text>"
         )
     elements.extend([
-        '<line x1="533" y1="25" x2="551" y2="25" stroke="#1f6feb" stroke-width="2.5"/>'
+        '<line x1="533" y1="25" x2="551" y2="25" stroke="#4f8f3c" stroke-width="2.5"/>'
         '<text class="axis" x="557" y="29">New repos</text>',
-        '<line x1="634" y1="25" x2="652" y2="25" stroke="#bf8700" stroke-width="2.5"/>'
+        '<line x1="634" y1="25" x2="652" y2="25" stroke="#d97706" stroke-width="2.5"/>'
         '<text class="axis" x="658" y="29">Blog posts</text>',
     ])
     elements.append('<text class="caption" x="18" y="25">New repositories and blog posts</text>')
