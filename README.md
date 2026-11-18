@@ -5,10 +5,9 @@
 </p>
 
 <p align="center">
-  <a href="https://cmduyeen.github.io/"><img src="https://img.shields.io/badge/Blog-cmduyeen.github.io-4f8f3c?style=for-the-badge&logo=hugo&logoColor=f7eed6" alt="Blog" /></a>
-  <a href="https://cmduyeen.github.io/tools/"><img src="https://img.shields.io/badge/Projects-Browser_Tools-8f563b?style=for-the-badge" alt="Projects" /></a>
-  <a href="https://cmduyeen.github.io/about/"><img src="https://img.shields.io/badge/About-Character_Sheet-d97706?style=for-the-badge" alt="About" /></a>
-  <a href="https://cmduyeen.github.io/index.xml"><img src="https://img.shields.io/badge/RSS-Subscribe-5b3a29?style=for-the-badge&logo=rss&logoColor=f7eed6" alt="RSS" /></a>
+  <a href="https://cmduyeen.github.io/about/">
+    <img src="assets/level-board.svg" alt="Farmer Skills &amp; Level Board" width="100%" />
+  </a>
 </p>
 
 <p align="center">
