@@ -149,14 +149,28 @@ def render_year_summary_svg(year, count):
     label = f"{year} HARVEST"
     badge = f"{count} REPOS"
     return (
-        '<svg xmlns="http://www.w3.org/2000/svg" width="320" height="34" viewBox="0 0 320 34" role="img" '
+        '<svg xmlns="http://www.w3.org/2000/svg" width="340" height="34" viewBox="0 0 340 34" role="img" '
         f'aria-label="{year} - {count} repositories">'
-        '<rect x="1" y="1" width="318" height="32" rx="6" fill="#fff8e7" stroke="#8f563b" stroke-width="1.8"/>'
+        '<rect x="1" y="1" width="338" height="32" rx="6" fill="#fff8e7" stroke="#8f563b" stroke-width="1.8"/>'
         '<rect x="8" y="7" width="112" height="20" rx="4" fill="#5b3a29"/>'
         f'<text x="64" y="21" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" font-weight="700" fill="#f7eed6">{html.escape(label)}</text>'
         '<rect x="128" y="7" width="88" height="20" rx="4" fill="#4f8f3c"/>'
         f'<text x="172" y="21" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" font-weight="700" fill="#f7eed6">{html.escape(badge)}</text>'
-        '<text x="304" y="21" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#8f563b">Click to expand</text>'
+        '<text x="326" y="21" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#8f563b">Click to expand</text>'
+        '</svg>\n'
+    )
+
+
+def render_repo_card_svg(created_label, name):
+    display_name = name if len(name) <= 30 else name[:27] + "..."
+    return (
+        '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 410 36" role="img" '
+        f'aria-label="{html.escape(created_label + ": " + name, quote=True)}">'
+        '<rect x="1" y="1" width="408" height="34" rx="6" fill="#fff8e7" stroke="#8f563b" stroke-width="1.6"/>'
+        '<rect x="8" y="7" width="58" height="22" rx="4" fill="#5b3a29"/>'
+        f'<text x="37" y="22" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" font-weight="700" fill="#f7eed6">{html.escape(created_label)}</text>'
+        f'<text x="76" y="22" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="700" fill="#2d241c">{html.escape(display_name)}</text>'
+        '<text x="394" y="22" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="700" fill="#4f8f3c">↗</text>'
         '</svg>\n'
     )
 
@@ -167,11 +181,23 @@ def write_year_summary_svgs(repositories, profile_repo, assets_dir):
         if not repository.get("private")
         and repository.get("name", "").casefold() != profile_repo.casefold()
     ]
-    counts = Counter(parse_datetime(repository["created_at"]).year for repository in visible)
-    for year, count in counts.items():
+    grouped = {}
+    for repository in visible:
+        created = parse_datetime(repository["created_at"])
+        grouped.setdefault(created.year, []).append((created, repository))
+    for year, items in grouped.items():
         (assets_dir / f"year-{year}.svg").write_text(
-            render_year_summary_svg(year, count), encoding="utf-8"
+            render_year_summary_svg(year, len(items)), encoding="utf-8"
         )
+        sorted_items = sorted(
+            items, key=lambda item: (-item[0].timestamp(), item[1]["name"].casefold())
+        )
+        for index, (created, repository) in enumerate(sorted_items, start=1):
+            created_label = f"{calendar.month_abbr[created.month].upper()}-{created.day:02d}"
+            (assets_dir / f"repo-{year}-{index:02d}.svg").write_text(
+                render_repo_card_svg(created_label, repository["name"]),
+                encoding="utf-8",
+            )
 
 
 def render_projects(repositories, profile_repo):
@@ -193,20 +219,22 @@ def render_projects(repositories, profile_repo):
     sections = []
     for year in sorted(grouped, reverse=True):
         entries = []
-        for created, repository in sorted(
-            grouped[year],
-            key=lambda item: (-item[0].timestamp(), item[1]["name"].casefold()),
+        for index, (created, repository) in enumerate(
+            sorted(
+                grouped[year],
+                key=lambda item: (-item[0].timestamp(), item[1]["name"].casefold()),
+            ),
+            start=1,
         ):
             created_label = f"{calendar.month_abbr[created.month].upper()}-{created.day:02d}"
-            name = html.escape(repository["name"])
+            name = html.escape(repository["name"], quote=True)
             url = html.escape(repository["html_url"], quote=True)
             entries.append(
-                f"<li><code>{created_label}</code> -&gt; "
-                f'<a href="{url}">{name}</a></li>'
+                f'<a href="{url}"><img src="assets/repo-{year}-{index:02d}.svg" alt="{created_label}: {name}" width="49%" /></a>'
             )
         details = (
             f"<details>\n<summary><img src=\"assets/year-{year}.svg\" alt=\"{year}-{len(grouped[year])}R\" align=\"absmiddle\" /></summary>\n\n"
-            "<ol>\n" + "\n".join(entries) + "\n</ol>\n</details>"
+            "<p>\n" + "\n".join(entries) + "\n</p>\n</details>"
         )
         sections.append(details)
     return "\n\n".join(sections) or "*No projects yet.*"
