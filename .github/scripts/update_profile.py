@@ -146,31 +146,87 @@ def month_range(now):
 
 
 def render_year_summary_svg(year, count):
-    label = f"{year} HARVEST"
-    badge = f"{count} REPOS"
+    label = f"{year} GARDEN"
+    badge = f"{count} PLANTS"
     return (
-        '<svg xmlns="http://www.w3.org/2000/svg" width="340" height="34" viewBox="0 0 340 34" role="img" '
+        '<svg xmlns="http://www.w3.org/2000/svg" width="360" height="36" viewBox="0 0 360 36" role="img" '
         f'aria-label="{year} - {count} repositories">'
-        '<rect x="1" y="1" width="338" height="32" rx="6" fill="#fff8e7" stroke="#8f563b" stroke-width="1.8"/>'
-        '<rect x="8" y="7" width="112" height="20" rx="4" fill="#5b3a29"/>'
-        f'<text x="64" y="21" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" font-weight="700" fill="#f7eed6">{html.escape(label)}</text>'
-        '<rect x="128" y="7" width="88" height="20" rx="4" fill="#4f8f3c"/>'
-        f'<text x="172" y="21" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" font-weight="700" fill="#f7eed6">{html.escape(badge)}</text>'
-        '<text x="326" y="21" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#8f563b">Click to expand</text>'
+        '<rect x="1" y="1" width="358" height="34" rx="6" fill="#2a221d" stroke="#9c7151" stroke-width="1.8"/>'
+        '<rect x="10" y="10" width="2" height="14" fill="#7ec850"/>'
+        '<rect x="7" y="10" width="3" height="3" fill="#7ec850"/><rect x="12" y="9" width="3" height="3" fill="#eab308"/>'
+        '<rect x="22" y="7" width="108" height="22" rx="4" fill="#1f1916" stroke="#5c4332"/>'
+        f'<text x="76" y="22" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" font-weight="700" fill="#f5ebd6">{html.escape(label)}</text>'
+        '<rect x="138" y="7" width="88" height="22" rx="4" fill="#2e6f28"/>'
+        f'<text x="182" y="22" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" font-weight="700" fill="#f5ebd6">{html.escape(badge)}</text>'
+        '<text x="346" y="22" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#d7c4a5">Expand tree</text>'
         '</svg>\n'
     )
 
 
-def render_repo_card_svg(created_label, name):
-    display_name = name if len(name) <= 30 else name[:27] + "..."
+def _plant_icon_svg(stage, cx=420, cy=24):
+    ox, oy = cx - 8, cy - 8
+    if stage == 0:
+        # Full tree with red fruit
+        return (
+            f'<rect x="{ox+6}" y="{oy+10}" width="4" height="4" fill="#8f563b"/>'
+            f'<rect x="{ox+3}" y="{oy+4}" width="10" height="6" fill="#2e6f28"/>'
+            f'<rect x="{ox+4}" y="{oy+2}" width="8" height="3" fill="#7ec850"/>'
+            f'<rect x="{ox+5}" y="{oy+5}" width="2" height="2" fill="#ef4444"/>'
+            f'<rect x="{ox+9}" y="{oy+7}" width="2" height="2" fill="#ef4444"/>'
+        )
+    if stage == 1:
+        # Blooming flower
+        return (
+            f'<rect x="{ox+7}" y="{oy+9}" width="2" height="5" fill="#2e6f28"/>'
+            f'<rect x="{ox+6}" y="{oy+4}" width="4" height="4" fill="#eab308"/>'
+            f'<rect x="{ox+4}" y="{oy+5}" width="2" height="2" fill="#f472b6"/>'
+            f'<rect x="{ox+10}" y="{oy+5}" width="2" height="2" fill="#f472b6"/>'
+            f'<rect x="{ox+7}" y="{oy+2}" width="2" height="2" fill="#f472b6"/>'
+        )
+    if stage == 2:
+        # Sapling
+        return (
+            f'<rect x="{ox+7}" y="{oy+8}" width="2" height="6" fill="#2e6f28"/>'
+            f'<rect x="{ox+4}" y="{oy+3}" width="3" height="3" fill="#7ec850"/>'
+            f'<rect x="{ox+9}" y="{oy+3}" width="3" height="3" fill="#2e6f28"/>'
+            f'<rect x="{ox+5}" y="{oy+6}" width="6" height="3" fill="#7ec850"/>'
+        )
+    # Sprout
     return (
-        '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 410 36" role="img" '
+        f'<rect x="{ox+7}" y="{oy+8}" width="2" height="5" fill="#2e6f28"/>'
+        f'<rect x="{ox+4}" y="{oy+5}" width="3" height="3" fill="#7ec850"/>'
+        f'<rect x="{ox+9}" y="{oy+4}" width="3" height="3" fill="#7ec850"/>'
+        f'<rect x="{ox+4}" y="{oy+13}" width="8" height="2" fill="#8f563b"/>'
+    )
+
+
+def render_repo_card_svg(created_label, name, index=0, total=1):
+    display_name = name if len(name) <= 28 else name[:25] + "..."
+    is_left = (index % 2 == 0)
+    if index < max(1, total // 4):
+        stage = 0
+    elif index < max(2, total // 2):
+        stage = 1
+    elif index < max(3, (total * 3) // 4):
+        stage = 2
+    else:
+        stage = 3
+    card_x = 18 if is_left else 448
+    branch_x1, branch_x2 = (392, 405) if is_left else (435, 448)
+    return (
+        '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 48" role="img" '
         f'aria-label="{html.escape(created_label + ": " + name, quote=True)}">'
-        '<rect x="1" y="1" width="408" height="34" rx="6" fill="#fff8e7" stroke="#8f563b" stroke-width="1.6"/>'
-        '<rect x="8" y="7" width="58" height="22" rx="4" fill="#5b3a29"/>'
-        f'<text x="37" y="22" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" font-weight="700" fill="#f7eed6">{html.escape(created_label)}</text>'
-        f'<text x="76" y="22" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="700" fill="#2d241c">{html.escape(display_name)}</text>'
-        '<text x="394" y="22" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="700" fill="#4f8f3c">↗</text>'
+        '<rect width="840" height="48" fill="#1f1916"/>'
+        '<rect x="418" y="0" width="4" height="48" fill="#2e6f28"/>'
+        f'<line x1="{branch_x1}" y1="24" x2="{branch_x2}" y2="24" stroke="#7ec850" stroke-width="2.5"/>'
+        '<circle cx="420" cy="24" r="15" fill="#2a221d" stroke="#7ec850" stroke-width="2"/>'
+        + _plant_icon_svg(stage, 420, 24) +
+        f'<rect x="{card_x}" y="5" width="374" height="38" rx="6" fill="#2a221d" stroke="#5c4332" stroke-width="1.6"/>'
+        f'<rect x="{card_x}" y="5" width="374" height="3" rx="1.5" fill="#7ec850"/>'
+        f'<rect x="{card_x + 10}" y="13" width="58" height="22" rx="4" fill="#1f1916" stroke="#9c7151"/>'
+        f'<text x="{card_x + 39}" y="28" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" font-weight="700" fill="#eab308">{html.escape(created_label)}</text>'
+        f'<text x="{card_x + 78}" y="28" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="700" fill="#f5ebd6">{html.escape(display_name)}</text>'
+        f'<text x="{card_x + 360}" y="28" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="700" fill="#7ec850">↗</text>'
         '</svg>\n'
     )
 
@@ -192,10 +248,11 @@ def write_year_summary_svgs(repositories, profile_repo, assets_dir):
         sorted_items = sorted(
             items, key=lambda item: (-item[0].timestamp(), item[1]["name"].casefold())
         )
+        total = len(sorted_items)
         for index, (created, repository) in enumerate(sorted_items, start=1):
             created_label = f"{calendar.month_abbr[created.month].upper()}-{created.day:02d}"
             (assets_dir / f"repo-{year}-{index:02d}.svg").write_text(
-                render_repo_card_svg(created_label, repository["name"]),
+                render_repo_card_svg(created_label, repository["name"], index - 1, total),
                 encoding="utf-8",
             )
 
@@ -230,7 +287,7 @@ def render_projects(repositories, profile_repo):
             name = html.escape(repository["name"], quote=True)
             url = html.escape(repository["html_url"], quote=True)
             entries.append(
-                f'<a href="{url}"><img src="assets/repo-{year}-{index:02d}.svg" alt="{created_label}: {name}" width="49%" /></a>'
+                f'<a href="{url}"><img src="assets/repo-{year}-{index:02d}.svg" alt="{created_label}: {name}" width="100%" /></a>'
             )
         details = (
             f"<details>\n<summary><img src=\"assets/year-{year}.svg\" alt=\"{year}-{len(grouped[year])}R\" align=\"absmiddle\" /></summary>\n\n"
@@ -248,11 +305,12 @@ def render_blog_post_svg(post):
     return (
         '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 42" role="img" '
         f'aria-label="{html.escape(iso + ": " + post["title"], quote=True)}">'
-        '<rect x="1" y="1" width="838" height="40" rx="7" fill="#fff8e7" stroke="#8f563b" stroke-width="1.8"/>'
-        '<rect x="10" y="9" width="92" height="24" rx="4" fill="#4f8f3c"/>'
-        f'<text x="56" y="25" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11.5" font-weight="700" fill="#f7eed6">{html.escape(iso)}</text>'
-        f'<text x="116" y="25" font-family="-apple-system, BlinkMacSystemFont, \'Segoe UI\', sans-serif" font-size="13.5" font-weight="600" fill="#2d241c">{html.escape(title)}</text>'
-        '<text x="820" y="26" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14" font-weight="700" fill="#8f563b">→</text>'
+        '<rect width="840" height="42" fill="#1f1916"/>'
+        '<rect x="1" y="1" width="838" height="40" rx="7" fill="#2a221d" stroke="#5c4332" stroke-width="1.6"/>'
+        '<rect x="10" y="9" width="92" height="24" rx="4" fill="#2e6f28"/>'
+        f'<text x="56" y="25" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11.5" font-weight="700" fill="#f5ebd6">{html.escape(iso)}</text>'
+        f'<text x="116" y="25" font-family="-apple-system, BlinkMacSystemFont, \'Segoe UI\', sans-serif" font-size="13.5" font-weight="600" fill="#f5ebd6">{html.escape(title)}</text>'
+        '<text x="820" y="26" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14" font-weight="700" fill="#eab308">→</text>'
         '</svg>\n'
     )
 

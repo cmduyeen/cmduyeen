@@ -1,63 +1,37 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 154" role="img" aria-labelledby="about-title about-desc">
-  <title id="about-title">About Dyn — Character Sheet</title>
-  <desc id="about-desc">Stardew Valley Cozy character card for cmduyeen.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 168" role="img" aria-label="Dyn — Gardener &amp; Toolmaker | ISFJ | Sagittarius | Made in Vietnam">
+  <rect width="840" height="168" rx="10" fill="#1f1916"/>
+  <rect x="6" y="6" width="828" height="156" rx="8" fill="#2a221d" stroke="#9c7151" stroke-width="2"/>
+  <rect x="6" y="6" width="828" height="4" rx="2" fill="#7ec850"/>
 
-  <!-- Outer wood frame & warm parchment -->
-  <rect x="1" y="1" width="838" height="152" rx="10" fill="#f7eed6" stroke="#8f563b" stroke-width="2.5"/>
-  <rect x="6" y="6" width="828" height="142" rx="7" fill="none" stroke="#e2d4b7" stroke-width="1.5"/>
+  <!-- Left: Name & Role -->
+  <text x="26" y="38" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="22" font-weight="800" fill="#f5ebd6">Dyn</text>
+  <rect x="80" y="20" width="154" height="22" rx="5" fill="#1f1916" stroke="#7ec850" stroke-width="1.4"/>
+  <text x="157" y="35" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" font-weight="700" fill="#7ec850">Gardener &amp; Toolmaker</text>
 
-  <!-- Left Pixel Avatar Frame -->
-  <rect x="22" y="22" width="110" height="110" rx="8" fill="#5b3a29"/>
-  <rect x="26" y="26" width="102" height="102" rx="6" fill="#2d241c"/>
-  <!-- Cute Pixel Junimo + Sprout inside frame -->
-  <g shape-rendering="crispEdges">
-    <rect x="74" y="40" width="6" height="8" fill="#4f8f3c"/>
-    <rect x="66" y="34" width="16" height="6" fill="#7ec850"/>
-    <rect x="54" y="48" width="46" height="38" fill="#7ec850"/>
-    <rect x="48" y="58" width="58" height="16" fill="#7ec850"/>
-    <rect x="54" y="80" width="46" height="6" fill="#4f8f3c"/>
-    <rect x="60" y="86" width="10" height="8" fill="#7ec850"/>
-    <rect x="84" y="86" width="10" height="8" fill="#7ec850"/>
-    <!-- Eyes -->
-    <rect x="62" y="58" width="6" height="8" fill="#2d241c"/>
-    <rect x="86" y="58" width="6" height="8" fill="#2d241c"/>
-    <!-- Blush -->
-    <rect x="56" y="66" width="6" height="4" fill="#f59e0b"/>
-    <rect x="92" y="66" width="6" height="4" fill="#f59e0b"/>
-    <!-- Ground grass -->
-    <rect x="26" y="110" width="102" height="18" fill="#4f8f3c"/>
-    <rect x="26" y="110" width="102" height="4" fill="#7ec850"/>
-  </g>
+  <text x="26" y="62" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12.5" fill="#d7c4a5">I enjoy gardening, reading, and building small useful tools for everyday life.</text>
 
-  <!-- Center Bio -->
-  <rect x="150" y="22" width="132" height="20" rx="4" fill="#4f8f3c"/>
-  <text x="160" y="36" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" font-weight="700" fill="#f7eed6">FARMER · ISFJ</text>
+  <!-- What I Enjoy Pills -->
+  <text x="26" y="88" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" font-weight="700" fill="#a69076">WHAT I ENJOY</text>
+  <rect x="26" y="96" width="94" height="24" rx="4" fill="#1f1916" stroke="#7ec850" stroke-width="1.2"/>
+  <text x="73" y="112" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" fill="#7ec850">Gardening</text>
+  <rect x="128" y="96" width="76" height="24" rx="4" fill="#1f1916" stroke="#eab308" stroke-width="1.2"/>
+  <text x="166" y="112" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" fill="#eab308">Reading</text>
+  <rect x="212" y="96" width="96" height="24" rx="4" fill="#1f1916" stroke="#9c7151" stroke-width="1.2"/>
+  <text x="260" y="112" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" fill="#f5ebd6">Small Tools</text>
+  <rect x="316" y="96" width="72" height="24" rx="4" fill="#1f1916" stroke="#7ec850" stroke-width="1.2"/>
+  <text x="352" y="112" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" fill="#7ec850">Nature</text>
 
-  <text x="150" y="66" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="21" font-weight="700" fill="#2d241c">Dyn (cmduyeen)</text>
-  <text x="150" y="90" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13.5" fill="#5b3a29">I read, code, and cook — building calm, fast tools for the web.</text>
+  <!-- Identity Pills -->
+  <text x="440" y="88" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10" font-weight="700" fill="#a69076">IDENTITY &amp; DAILY TOOLS</text>
+  <rect x="440" y="96" width="58" height="24" rx="4" fill="#1f1916" stroke="#eab308" stroke-width="1.2"/>
+  <text x="469" y="112" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" font-weight="700" fill="#eab308">ISFJ</text>
+  <rect x="506" y="96" width="102" height="24" rx="4" fill="#1f1916" stroke="#9c7151" stroke-width="1.2"/>
+  <text x="557" y="112" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" fill="#f5ebd6">Sagittarius</text>
+  <rect x="616" y="96" width="146" height="24" rx="4" fill="#1f1916" stroke="#eab308" stroke-width="1.2"/>
+  <text x="689" y="112" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" font-weight="700" fill="#f5ebd6">Made in Vietnam</text>
 
-  <text x="150" y="120" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#4f8f3c">✦ Focus: Engineering notes, automation workflows &amp; minimalist UI</text>
-
-  <!-- Right Divider -->
-  <line x1="566" y1="24" x2="566" y2="130" stroke="#d9c6a3" stroke-width="1.5" stroke-dasharray="4 4"/>
-
-  <!-- Right Craftbench Stack -->
-  <text x="584" y="36" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" font-weight="700" fill="#8f563b">CRAFTBENCH STACK</text>
-
-  <rect x="584" y="48" width="70" height="24" rx="5" fill="#fff8e7" stroke="#8f563b" stroke-width="1.5"/>
-  <text x="619" y="64" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" font-weight="600" fill="#2d241c">Hugo</text>
-
-  <rect x="662" y="48" width="84" height="24" rx="5" fill="#fff8e7" stroke="#8f563b" stroke-width="1.5"/>
-  <text x="704" y="64" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" font-weight="600" fill="#2d241c">Obsidian</text>
-
-  <rect x="754" y="48" width="66" height="24" rx="5" fill="#fff8e7" stroke="#8f563b" stroke-width="1.5"/>
-  <text x="787" y="64" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" font-weight="600" fill="#2d241c">Python</text>
-
-  <rect x="584" y="80" width="82" height="24" rx="5" fill="#fff8e7" stroke="#8f563b" stroke-width="1.5"/>
-  <text x="625" y="96" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" font-weight="600" fill="#2d241c">VS Code</text>
-
-  <rect x="674" y="80" width="146" height="24" rx="5" fill="#fff8e7" stroke="#8f563b" stroke-width="1.5"/>
-  <text x="747" y="96" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" font-weight="600" fill="#2d241c">GitHub Actions</text>
-
-  <text x="584" y="124" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" fill="#6e523f">Home: cmduyeen.github.io</text>
+  <!-- Footer -->
+  <line x1="26" y1="134" x2="814" y2="134" stroke="#5c4332" stroke-dasharray="4 4"/>
+  <text x="26" y="150" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#a69076">Tools: Obsidian · Hugo · Neovim · Python</text>
+  <text x="814" y="150" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="10.5" fill="#eab308">cmduyeen.github.io/about/ →</text>
 </svg>

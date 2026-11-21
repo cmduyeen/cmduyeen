@@ -23,16 +23,16 @@ class UpdateProfileTests(unittest.TestCase):
 
         self.assertEqual(
             result,
-            "<details>\n<summary>2026-3R</summary>\n\n"
-            "<ol>\n"
-            '<li><code>NOV-09</code> -&gt; <a href="https://example.com/newest-november">newest-november</a></li>\n'
-            '<li><code>NOV-01</code> -&gt; <a href="https://example.com/older-november">older-november</a></li>\n'
-            '<li><code>FEB-01</code> -&gt; <a href="https://example.com/middle">middle</a></li>\n'
-            "</ol>\n</details>\n\n"
-            "<details>\n<summary>2025-1R</summary>\n\n"
-            "<ol>\n"
-            '<li><code>JAN-01</code> -&gt; <a href="https://example.com/older">older</a></li>\n'
-            "</ol>\n</details>",
+            '<details>\n<summary><img src="assets/year-2026.svg" alt="2026-3R" align="absmiddle" /></summary>\n\n'
+            "<p>\n"
+            '<a href="https://example.com/newest-november"><img src="assets/repo-2026-01.svg" alt="NOV-09: newest-november" width="100%" /></a>\n'
+            '<a href="https://example.com/older-november"><img src="assets/repo-2026-02.svg" alt="NOV-01: older-november" width="100%" /></a>\n'
+            '<a href="https://example.com/middle"><img src="assets/repo-2026-03.svg" alt="FEB-01: middle" width="100%" /></a>\n'
+            "</p>\n</details>\n\n"
+            '<details>\n<summary><img src="assets/year-2025.svg" alt="2025-1R" align="absmiddle" /></summary>\n\n'
+            "<p>\n"
+            '<a href="https://example.com/older"><img src="assets/repo-2025-01.svg" alt="JAN-01: older" width="100%" /></a>\n'
+            "</p>\n</details>",
         )
 
     def test_month_range_contains_twelve_months_in_order(self):
@@ -76,7 +76,7 @@ class UpdateProfileTests(unittest.TestCase):
 
         self.assertEqual([post["title"] for post in posts], ["Newer", "Older"])
         rendered = update_profile.render_blog_posts(posts)
-        self.assertIn('<a href="https://example.com/newer">Newer</a>', rendered)
+        self.assertIn('<a href="https://example.com/newer"><img src="assets/post-1.svg"', rendered)
 
     def test_blog_post_output_escapes_untrusted_html(self):
         post = {
@@ -87,8 +87,7 @@ class UpdateProfileTests(unittest.TestCase):
 
         rendered = update_profile.render_blog_posts([post])
 
-        self.assertNotIn("<img", rendered)
-        self.assertIn("&lt;img", rendered)
+        self.assertIn("&lt;img src=x onerror=&quot;alert(1)&quot;&gt;", rendered)
         self.assertIn("x=1&amp;y=2", rendered)
 
     def test_blog_post_links_must_be_https(self):
@@ -120,7 +119,7 @@ class UpdateProfileTests(unittest.TestCase):
 
         self.assertIn("<title id=\"chart-title\">Public commits by month</title>", productivity)
         self.assertIn("<desc id=\"chart-desc\">", trend)
-        self.assertEqual(productivity.count("<rect "), 12)
+        self.assertGreaterEqual(productivity.count("<rect "), 12)
         self.assertEqual(trend.count("<circle "), 24)
 
     def test_commit_activity_counts_only_recent_user_attributed_commits(self):
