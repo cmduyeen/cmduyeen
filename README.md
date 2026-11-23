@@ -1,22 +1,22 @@
-<p align="center">
-  <a href="https://cmduyeen.github.io/">
-    <img src="assets/banner.svg" alt="~/dyn — Notes, Reviews &amp; Personal Projects" width="100%" />
-  </a>
-</p>
+### Dyn (`cmduyeen`)
 
-<p align="center">
-  <a href="https://cmduyeen.github.io/about/">
-    <img src="assets/about-card.svg" alt="Dyn — Gardener &amp; Toolmaker | ISFJ | Sagittarius | Made in Vietnam" width="100%" />
-  </a>
-</p>
+Minimalist tools and warm, eye-comfortable interfaces. Made in Vietnam.
 
-<p align="center">
-  <a href="https://cmduyeen.github.io/tools/">
-    <img src="assets/projects-grid.svg" alt="Featured Browser Tools &amp; Open-Source Suites" width="100%" />
-  </a>
-</p>
+- Website: [cmduyeen.github.io](https://cmduyeen.github.io/)
+- Design system: [serein-theme](https://github.com/cmduyeen/serein-theme) (Alabaster & Obsidian)
 
-<p><img src="assets/heading-mystuff.svg" alt="My Stuff" width="100%" /></p>
+---
+
+### Selected
+
+- [serein-theme](https://github.com/cmduyeen/serein-theme) — Warm, low-distraction color suite for editors, terminals, and daily apps.
+- [online-calculator](https://github.com/cmduyeen/online-calculator) — Fast, ad-free scientific calculator (580VN) for Vietnamese students.
+- [lich-am-viet-nam](https://github.com/cmduyeen/lich-am-viet-nam) — Vietnamese lunar calendar (GMT+7) for Google & Apple Calendar.
+- [pro-blog-starter-kit](https://github.com/cmduyeen/pro-blog-starter-kit) — Lightweight static blog template.
+
+---
+
+### Repositories
 
 <!-- MY-STUFF:START -->
 <details>
@@ -66,17 +66,18 @@
 </details>
 
 <details>
-<summary><img src="assets/year-2025.svg" alt="2025-3R" align="absmiddle" /></summary>
+<summary>2025 (3)</summary>
 
-<p>
-<a href="https://github.com/cmduyeen/Focus-Assistant-Extension"><img src="assets/repo-2025-01.svg" alt="JUN-10: Focus-Assistant-Extension" width="100%" /></a>
-<a href="https://github.com/cmduyeen/Pomodoro-Timer-PowerShell"><img src="assets/repo-2025-02.svg" alt="JUN-04: Pomodoro-Timer-PowerShell" width="100%" /></a>
-<a href="https://github.com/cmduyeen/CleanWindowsCMD-Free-Safe"><img src="assets/repo-2025-03.svg" alt="APR-10: CleanWindowsCMD-Free-Safe" width="100%" /></a>
-</p>
+- `JUN-10` [Focus-Assistant-Extension](https://github.com/cmduyeen/Focus-Assistant-Extension)
+- `JUN-04` [Pomodoro-Timer-PowerShell](https://github.com/cmduyeen/Pomodoro-Timer-PowerShell)
+- `APR-10` [CleanWindowsCMD-Free-Safe](https://github.com/cmduyeen/CleanWindowsCMD-Free-Safe)
+
 </details>
 <!-- MY-STUFF:END -->
 
-<p><img src="assets/heading-blog.svg" alt="Latest from the Blog" width="100%" /></p>
+---
+
+### Writing
 
 <!-- BLOG-POST-LIST:START -->
 <a href="https://cmduyeen.github.io/posts/vn-580-plus-online-calculator/"><img src="assets/post-1.svg" alt="2026-11-21: VN-580 Plus: Free Online Scientific Calculator for Students (with 5 Themes)" width="100%" /></a>
@@ -85,11 +86,3 @@
 <a href="https://cmduyeen.github.io/posts/build-github-profile-and-blog-in-60-seconds/"><img src="assets/post-4.svg" alt="2026-11-17: Build a Pro GitHub Profile and Personal Blog in 60 Seconds — 100% Free" width="100%" /></a>
 <a href="https://cmduyeen.github.io/posts/markdown-101-10-capstone-practice/"><img src="assets/post-5.svg" alt="2026-11-17: Capstone Practice - Write a Complete Markdown Article from Scratch (Markdown 101 - Part 10)" width="100%" /></a>
 <!-- BLOG-POST-LIST:END -->
-
-<p><img src="assets/heading-harvest.svg" alt="Farm Harvest & Productivity" width="100%" /></p>
-
-<!-- PRODUCTIVITY:START -->
-![Public commits by month](assets/productivity.svg)
-
-![New repositories and blog posts per month](assets/repo-blog-trend.svg)
-<!-- PRODUCTIVITY:END -->

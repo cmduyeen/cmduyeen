@@ -1,22 +1,16 @@
 name: Update profile README
 
 on:
-  # Cập nhật danh sách repo/RSS hàng ngày; làm mới biểu đồ commit vào Chủ nhật.
   schedule:
-    - cron: '17 17 * * 1-6'
-    - cron: '17 17 * * 0'
-  # Cập nhật ngay khi logic workflow thay đổi; README output không kích hoạt lại workflow.
+    - cron: '17 17 * * *'
   push:
     paths:
       - '.github/workflows/update-readme.yml'
       - '.github/scripts/update_profile.py'
-  # Kích hoạt hướng sự kiện (Event-driven): Nhận webhook dispatch từ blog khi publish bài viết mới
   repository_dispatch:
     types: [blog_published, sync_profile]
-  # Kích hoạt thủ công qua GitHub Actions UI
   workflow_dispatch:
 
-# Xếp hàng thay vì hủy run đang gọi API, tránh lãng phí lượt gọi.
 concurrency:
   group: profile-readme
   cancel-in-progress: false
@@ -34,11 +28,10 @@ jobs:
         with:
           fetch-depth: 1
 
-      - name: Update README and productivity charts
+      - name: Update README
         env:
           BLOG_FEED_URL: ${{ vars.BLOG_FEED_URL || 'https://cmduyeen.github.io/index.xml' }}
           GITHUB_TOKEN: ${{ github.token }}
-          UPDATE_COMMIT_CHART: ${{ (github.event_name != 'schedule' || github.event.schedule == '17 17 * * 0') && (github.event_name != 'repository_dispatch' || github.event.action != 'blog_published') }}
         run: python3 .github/scripts/update_profile.py
 
       - name: Commit README changes
@@ -46,7 +39,6 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add README.md
-          git add assets/*.svg
           if ! git diff --cached --quiet; then
             git commit -m "chore: update profile README [skip ci]"
             git push
