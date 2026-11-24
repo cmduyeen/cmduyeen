@@ -1,6 +1,6 @@
 ### Dyn (`cmduyeen`)
 
-Minimalist tools and warm, eye-comfortable interfaces. Made in Vietnam.
+Plain-text engineering notes and minimal tools.
 
 - Website: [cmduyeen.github.io](https://cmduyeen.github.io/)
 - Design system: [serein-theme](https://github.com/cmduyeen/serein-theme) (Alabaster & Obsidian)
@@ -10,7 +10,7 @@ Minimalist tools and warm, eye-comfortable interfaces. Made in Vietnam.
 ### Selected
 
 - [serein-theme](https://github.com/cmduyeen/serein-theme) — Warm, low-distraction color suite for editors, terminals, and daily apps.
-- [online-calculator](https://github.com/cmduyeen/online-calculator) — Fast, ad-free scientific calculator (580VN) for Vietnamese students.
+- [may-tinh-khoa-hoc-online](https://github.com/cmduyeen/may-tinh-khoa-hoc-online) — Fast, ad-free scientific calculator (580VN) for Vietnamese students.
 - [lich-am-viet-nam](https://github.com/cmduyeen/lich-am-viet-nam) — Vietnamese lunar calendar (GMT+7) for Google & Apple Calendar.
 - [pro-blog-starter-kit](https://github.com/cmduyeen/pro-blog-starter-kit) — Lightweight static blog template.
 
