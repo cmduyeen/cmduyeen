@@ -1,22 +1,4 @@
-### Dyn (`cmduyeen`)
-
-Plain-text engineering notes and minimal tools.
-
-- Website: [cmduyeen.github.io](https://cmduyeen.github.io/)
-- Design system: [serein-theme](https://github.com/cmduyeen/serein-theme) (Alabaster & Obsidian)
-
----
-
-### Selected
-
-- [serein-theme](https://github.com/cmduyeen/serein-theme) — Warm, low-distraction color suite for editors, terminals, and daily apps.
-- [may-tinh-khoa-hoc-online](https://github.com/cmduyeen/may-tinh-khoa-hoc-online) — Fast, ad-free scientific calculator (580VN) for Vietnamese students.
-- [lich-am-viet-nam](https://github.com/cmduyeen/lich-am-viet-nam) — Vietnamese lunar calendar (GMT+7) for Google & Apple Calendar.
-- [pro-blog-starter-kit](https://github.com/cmduyeen/pro-blog-starter-kit) — Lightweight static blog template.
-
----
-
-### Repositories
+## Repositories
 
 <!-- MY-STUFF:START -->
 <details>
@@ -76,7 +58,7 @@ Plain-text engineering notes and minimal tools.
 
 ---
 
-### Writing
+## Writing
 
 <!-- BLOG-POST-LIST:START -->
 - `2026-11-24` [How I Sped Up PowerShell 7 Startup with CommandNotFoundAction](https://cmduyeen.github.io/posts/speed-up-powershell-startup-commandnotfoundaction/)
