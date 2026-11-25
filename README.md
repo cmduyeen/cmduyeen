@@ -79,9 +79,9 @@ Plain-text engineering notes and minimal tools.
 ### Writing
 
 <!-- BLOG-POST-LIST:START -->
+- `2026-11-24` [How I Sped Up PowerShell 7 Startup with CommandNotFoundAction](https://cmduyeen.github.io/posts/speed-up-powershell-startup-commandnotfoundaction/)
 - `2026-11-21` [VN-580 Plus: Free Online Scientific Calculator for Students (with 5 Themes)](https://cmduyeen.github.io/posts/vn-580-plus-online-calculator/)
 - `2026-11-18` [Obsidian vs Notion in 2026: Which Free System Should Builders Choose?](https://cmduyeen.github.io/posts/obsidian-vs-notion-for-builders/)
 - `2026-11-17` [Add a Vietnamese Lunar Calendar (GMT+7) to Google &amp; Apple Calendar Without Extra Apps](https://cmduyeen.github.io/posts/vietnamese-lunar-calendar-google-apple-calendar/)
 - `2026-11-17` [Build a Pro GitHub Profile and Personal Blog in 60 Seconds — 100% Free](https://cmduyeen.github.io/posts/build-github-profile-and-blog-in-60-seconds/)
-- `2026-11-17` [Capstone Practice - Write a Complete Markdown Article from Scratch (Markdown 101 - Part 10)](https://cmduyeen.github.io/posts/markdown-101-10-capstone-practice/)
 <!-- BLOG-POST-LIST:END -->
